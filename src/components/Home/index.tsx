@@ -87,6 +87,117 @@ export default function Home() {
                             "Docker"
                         ]}
                     />
+                    <ExperienceEntry
+                        timeframe="2023"
+                        title="NextJS Developer at Condoit"
+                        description="As a Senior Developer at Condoit, I spearheaded the development of a groundbreaking application for administration, project management, user management, and subscription handling. Leveraging Next.js (App Router), Stripe.js, Chakra UI, and Tanstack's Table and Query, I single-handedly built the application from scratch, significantly improving administrative processes and user experience."
+                        techStack={[
+                            "Next.js",
+                            "Stripe.js",
+                            "Chakra UI",
+                            "Tanstack Table",
+                            "Tanstack Query"
+                        ]}
+                    />
+                    <ExperienceEntry
+                        timeframe="2022"
+                        title="NextJS Developer at Uptimepm"
+                        description="As a Full Stack Engineer, I drove the upgrade of key applications using modern web and mobile technologies, enhancing a platform dedicated to vehicle maintenance management. Developed robust features for maintenance and cost tracking, and contributed to a React Native app for mechanics and operators."
+                        techStack={[
+                            "Next.js",
+                            "React Native",
+                            "TypeScript",
+                            "GraphQL",
+                            "Node.js",
+                            "AWS S3",
+                            "RavenDB"
+                        ]}
+                    />
+                    <ExperienceEntry
+                        timeframe="2021"
+                        title="React FullStack Developer at Liberty Furniture"
+                        description="As a Full Stack Engineer, I upgraded existing applications using modern technologies, ensuring seamless performance and enhanced user experience. Revitalized Next.js-based applications with bug fixes and new features using TypeScript, GraphQL, Node.js, and MongoDB."
+                        techStack={[
+                            "Next.js",
+                            "TypeScript",
+                            "GraphQL",
+                            "Node.js",
+                            "MongoDB"
+                        ]}
+                    />
+                    <ExperienceEntry
+                        timeframe="2020 - 2021"
+                        title="Angular 6 Developer at Number 8"
+                        description="As a Senior Frontend Engineer, I advanced Angular applications by integrating innovative features and rigorous UX/UI designs. Enhanced applications using Angular, TypeScript, and RxJS by addressing bugs and incorporating new features. Collaborated with design teams to implement high-quality, user-centric interfaces and delivered solutions effectively within a Scrum environment."
+                        techStack={[
+                            "Angular 6",
+                            "TypeScript",
+                            "RxJS"
+                        ]}
+                    />
+                    <ExperienceEntry
+                        timeframe="2019 - 2020"
+                        title="Software Developer at Gildan"
+                        description="I was instrumental in establishing a unified look and feel across company applications by developing a complete style guide. Designed and implemented a comprehensive style guide to ensure consistency across Angular, Node.js, SQL Server, RxJS, and TypeScript applications. Translated mockups into fully coded, professional applications enhancing both aesthetics and functionality."
+                        techStack={[
+                            "Angular",
+                            "Node.js",
+                            "SQL Server",
+                            "RxJS",
+                            "TypeScript"
+                        ]}
+                    />
+                    <ExperienceEntry
+                        timeframe="2019"
+                        title="Angular Developer at Serpico Dev"
+                        description="I focused on optimizing an existing Angular project by resolving issues and integrating real-time communication features. Addressed critical bugs while implementing new functionalities to improve the overall application. Integrated Redux and Twilio for a real-time chat feature, ensuring efficient data flow with a NoSQL Firebase database."
+                        techStack={[
+                            "Angular",
+                            "Redux",
+                            "Twilio",
+                            "Firebase",
+                            "RxJS"
+                        ]}
+                    />
+                    <ExperienceEntry
+                        timeframe="2018 - 2019"
+                        title="Software Developer at New Generation Software"
+                        description="As a Junior .NET Developer, I built a strong foundation in software development and database management while gaining exposure to front-end design. Crafted clean and efficient backend code using .NET technologies with Oracle as the primary database. Dabbled in Microsoft framework-based front-end development, enhancing overall system integration."
+                        techStack={[
+                            ".NET",
+                            "Oracle",
+                            "Microsoft Framework"
+                        ]}
+                    />
+                    <ExperienceEntry
+                        timeframe="2017 - 2018"
+                        title="Frontend Developer at Mercer"
+                        description="I contributed to developing and maintaining multiple React.js web applications, focusing on delivering pixel-perfect interfaces. Engineered and maintained high-performing web applications using React.js. Worked closely with the design team to achieve pixel-perfect user interfaces and leveraged state management libraries to implement complex, responsive features."
+                        techStack={[
+                            "React.js",
+                            "State Management"
+                        ]}
+                    />
+                    <ExperienceEntry
+                        timeframe="2014 - 2017"
+                        title="Frontend Developer at PartnerHero"
+                        description="I built a full-stack solution from the ground up that empowered call centers with real-time sales tracking and performance evaluation. Developed an application using ReactJS, Firebase, and RESTful services to track sales and manage call center operations. Ensured a responsive, user-friendly interface that facilitated real-time monitoring and pipeline management."
+                        techStack={[
+                            "ReactJS",
+                            "Firebase",
+                            "RESTful Services"
+                        ]}
+                    />
+                    <ExperienceEntry
+                        timeframe="2013"
+                        title="Frontend Developer at San Services"
+                        description="I played a key role in designing CRM solutions and was an early adopter of React.js, laying the groundwork for future frontend innovations. Designed, developed, and implemented CRM applications using Node.js with an Oracle Database. Contributed to the early adoption of React.js by creating reusable components and optimizing performance."
+                        techStack={[
+                            "Node.js",
+                            "Oracle",
+                            "React.js"
+                        ]}
+                    />
                 </Stack>
             </Stack>
             
