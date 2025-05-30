@@ -15,11 +15,26 @@ import { Avatar } from "../ui/avatar";
 import { StarryBackground } from "../ui/starry-background";
 import { ColorModeButton, useColorModeValue } from "../ui/color-mode";
 import { ExperienceEntry } from "../ui/experience-entry";
+import { useRef, useState } from "react";
 
 export default function Home() {
   const colors = useColorModeValue("teal.800", "teal.200");
   const bg = useColorModeValue("teal.200", "teal.800");
   const isMobile = useBreakpointValue({ base: true, md: false });
+
+  // Section refs for scrolling
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const experienceRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const [activeSection, setActiveSection] = useState("experience");
+
+  const handleNavClick = (section: string) => {
+    setActiveSection(section);
+    let ref = aboutRef;
+    if (section === "experience") ref = experienceRef;
+    if (section === "projects") ref = projectsRef;
+    ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <>
@@ -65,6 +80,59 @@ export default function Home() {
               scalable and efficient web applications.
             </Text>
             
+            {/* Responsive Section Navigation */}
+            <Stack
+              mt={{ base: 0, lg: 8 }}
+              gap={{ base: 0, lg: 2 }}
+              direction={{ base: "row", lg: "column" }}
+              as="nav"
+              aria-label="Section navigation"
+              position={{ base: "fixed", lg: "static" }}
+              top={{ base: 0, lg: undefined }}
+              left={{ base: 0, lg: undefined }}
+              width={{ base: "100vw", lg: "auto" }}
+              zIndex={100}              
+              px={{ base: 2, lg: 0 }}
+              py={{ base: 2, lg: 0 }}              
+            >
+              {[
+                { label: "About", key: "about" },
+                { label: "Experience", key: "experience" },
+                { label: "Projects", key: "projects" },
+              ].map((item) => (
+                <HStack
+                  key={item.key}
+                  gap={3}
+                  alignItems="center"
+                  cursor="pointer"
+                  opacity={activeSection === item.key ? 1 : 0.5}
+                  fontWeight={activeSection === item.key ? 700 : 400}
+                  color={activeSection === item.key ? colors : "gray.400"}
+                  onClick={() => handleNavClick(item.key)}
+                  flex={{ base: 1, lg: undefined }}
+                  justifyContent={{ base: "center", lg: "flex-start" }}
+                  py={{ base: 2, lg: 0 }}
+                >
+                  <Box
+                    w={{ base: "2px", lg: "32px" }}
+                    h={{ base: "24px", lg: "2px" }}
+                    bg={activeSection === item.key ? colors : "gray.600"}
+                    borderRadius="full"
+                    transition="all 0.2s"
+                    mr={{ base: 0, lg: 2 }}
+                    mb={{ base: 0, lg: 0 }}
+                  />
+                  <Text
+                    fontSize="sm"
+                    letterSpacing={2}
+                    textTransform="uppercase"
+                    transition="all 0.2s"
+                  >
+                    {item.label}
+                  </Text>
+                </HStack>
+              ))}
+            </Stack>
           </Stack>
 
           {/* Right Column */}
@@ -74,6 +142,7 @@ export default function Home() {
             borderRadius={8}
             overflowY={{ base: 'visible', lg: 'auto' }}
             maxHeight={{ base: 'none', lg: '100vh' }}
+            pt={{ base: '64px', lg: 0 }}
             css={{
               "@media (min-width: 62em)": {
                 '&::-webkit-scrollbar': { display: 'none' },
@@ -82,6 +151,8 @@ export default function Home() {
               }
             }}
           >
+            {/* About Section */}
+            <Box ref={aboutRef} mb={12} />
             <Heading fontWeight={"800"} fontSize={"1em"} lineHeight={"1.2"}>
               About Me
             </Heading>
@@ -130,6 +201,8 @@ export default function Home() {
               </Highlight>
             </Text>
 
+            {/* Experience Section */}
+            <Box ref={experienceRef} mb={12} />
             <Stack mt={10} gap={8}>
               <ExperienceEntry
                 timeframe="2023 - 2025"
@@ -248,6 +321,15 @@ export default function Home() {
                 techStack={["Node.js", "Oracle", "React.js"]}
               />
             </Stack>
+
+            {/* Projects Section Placeholder */}
+            <Box ref={projectsRef} mb={12} />
+            <Heading fontWeight="800" fontSize="1em" lineHeight="1.2" color="gray.500" mb={4}>
+              Projects (Coming Soon)
+            </Heading>
+            {/* <Box h={32} bg="gray.800" borderRadius={8} opacity={0.3} display="flex" alignItems="center" justifyContent="center">
+              <Text color="gray.400">Projects section will be added here.</Text>
+            </Box> */}
           </Stack>
         </Stack>
       </Container>
