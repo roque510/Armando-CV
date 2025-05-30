@@ -2,14 +2,12 @@
 
 import {
   Box,
-  Button,
   Container,
   Heading,
   Highlight,
   HStack,
   Stack,
   Text,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import { Avatar } from "../ui/avatar";
 import { StarryBackground } from "../ui/starry-background";
@@ -20,7 +18,6 @@ import { useRef, useState } from "react";
 export default function Home() {
   const colors = useColorModeValue("teal.800", "teal.200");
   const bg = useColorModeValue("teal.200", "teal.800");
-  const isMobile = useBreakpointValue({ base: true, md: false });
 
   // Section refs for scrolling
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -76,7 +73,7 @@ export default function Home() {
               <Text fontWeight={"700"}>Full Stack Software Engineer</Text>
             </HStack>
             <Text fontWeight={"300"}>
-              I'm a full stack software engineer with a passion for building
+              I&apos;m a full stack software engineer with a passion for building
               scalable and efficient web applications.
             </Text>
             
@@ -161,20 +158,20 @@ export default function Home() {
                 styles={{ color: colors, bg: bg }}
                 query="spearheading"
               >
-                I'm a Full Stack Developer with 10+ years of experience building
+                I&apos;m a Full Stack Developer with 10+ years of experience building
                 fast, responsive apps across industries. I work with tools like
                 Next.js, React, Angular, and Node.js to create clean, scalable
-                solutions that users love. Whether I'm spearheading new projects
+                solutions that users love. Whether I&apos;m spearheading new projects
                 or modernizing legacy systems, I focus on delivering great UX
                 with solid performance.
               </Highlight>
             </Text>
             <Text fontWeight="300" mt={4}>
-              I've led full product builds—from real-time scheduling platforms
+              I&apos;ve led full product builds—from real-time scheduling platforms
               to admin dashboards and Stripe integrations—using PostgreSQL,
               Prisma, GraphQL, and more. I move fast, communicate clearly, and
-              bring long-term thinking to every build. If you're looking for
-              someone who can ship, improve, and scale with your team, that's
+              bring long-term thinking to every build. If you&apos;re looking for
+              someone who can ship, improve, and scale with your team, that&apos;s
               what I do best.
             </Text>
             <Text fontWeight="300" mt={4}>
@@ -188,13 +185,13 @@ export default function Home() {
                   "UptimePM",
                 ]}
               >
-                Over the years, I've built impactful software for companies like
+                Over the years, I&apos;ve built impactful software for companies like
                 Qualpay, Squarecodex, Condoit, Liberty Furniture, and UptimePM.
                 At Qualpay, I improved real-time reporting for their payment
                 platform, helping businesses track transactions with greater
                 accuracy. At Squarecodex, I built a seamless scheduling app with
                 Stripe for certified professionals. At Condoit, I launched a
-                full admin system with Next.js. I've also modernized legacy
+                full admin system with Next.js. I&apos;ve also modernized legacy
                 systems at Liberty Furniture and delivered mobile-first tools at
                 UptimePM—each project pushing me to write cleaner, smarter code
                 that drives results.

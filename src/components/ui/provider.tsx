@@ -2,14 +2,15 @@
 
 import { ChakraProvider, defaultSystem } from "@chakra-ui/react"
 import {
-  ColorModeProvider,
-  type ColorModeProviderProps,
+  ColorModeProvider,  
 } from "./color-mode"
+import { ThemeProviderProps } from "next-themes"
+import { JSX } from "react"
 
-export function Provider(props: ColorModeProviderProps) {
+export function Provider(props: JSX.IntrinsicAttributes & ThemeProviderProps) {
   return (
     <ChakraProvider value={defaultSystem}>
-      <ColorModeProvider {...props} />
+      <ColorModeProvider  {...props} />
     </ChakraProvider>
   )
 }

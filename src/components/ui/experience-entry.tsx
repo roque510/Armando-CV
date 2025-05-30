@@ -46,8 +46,9 @@ export const ExperienceEntry = ({ timeframe, title, description, techStack }: Ex
               size="xs"
               variant="ghost"
               onClick={() => scroll('left')}
-              children="←"
-            />
+            >
+              ←
+            </IconButton>
             <Box 
               ref={scrollRef}
               width={{ base: '100%', md: '420px' }}
@@ -93,8 +94,9 @@ export const ExperienceEntry = ({ timeframe, title, description, techStack }: Ex
               size="xs"
               variant="ghost"
               onClick={() => scroll('right')}
-              children="→"
-            />
+            >
+              →
+            </IconButton>
           </HStack>
     </Box>
   )
