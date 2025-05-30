@@ -13,12 +13,12 @@ import {
 import Image from "next/image"
 import { ColorModeToggle } from "@/components/color-mode-toggle"
 import Home from "@/components/Home"
-import { ColorModeButton } from "@/components/ui/color-mode"
+
 
 export default async function Page() {
   return (
     <>
-    <ColorModeButton />
+    {/* <ColorModeButton /> */}
     <Home />
     </>
   )
