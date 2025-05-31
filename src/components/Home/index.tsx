@@ -8,12 +8,15 @@ import {
   HStack,
   Stack,
   Text,
+  IconButton,
+  Link,
 } from "@chakra-ui/react";
 import { Avatar } from "../ui/avatar";
 import { StarryBackground } from "../ui/starry-background";
 import { ColorModeButton, useColorModeValue } from "../ui/color-mode";
 import { ExperienceEntry } from "../ui/experience-entry";
 import { useRef, useState } from "react";
+import { LuDownload } from "react-icons/lu";
 
 export default function Home() {
   const colors = useColorModeValue("teal.800", "teal.200");
@@ -71,6 +74,31 @@ export default function Home() {
             <HStack>
               <ColorModeButton />
               <Text fontWeight={"700"}>Full Stack Software Engineer</Text>
+            </HStack>
+            <HStack>
+              <Link
+                href="/Armando-cv.pdf"
+                download
+                display="flex"
+                alignItems="center"
+                gap={2}
+                _hover={{ opacity: 0.8 }}
+              >
+                <IconButton
+                  aria-label="Download Resume"
+                  variant="ghost"
+                  size="sm"
+                  css={{
+                    _icon: {
+                      width: "5",
+                      height: "5",
+                    },
+                  }}
+                >
+                  <LuDownload />
+                </IconButton>
+                <Text fontWeight={"500"}>Download Resume</Text>
+              </Link>
             </HStack>
             <Text fontWeight={"300"}>
               I&apos;m a full stack software engineer with a passion for building
