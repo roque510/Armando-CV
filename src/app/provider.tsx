@@ -1,11 +1,16 @@
 "use client"
 
-import { Provider } from "@/components/ui/provider"
+import { ChakraProvider, defaultSystem } from "@chakra-ui/react"
+import { ColorModeProvider } from "@/components/ui/color-mode"
+import { ThemeProviderProps } from "next-themes"
+import { JSX } from "react"
 
-export default function RootLayout(props: { children: React.ReactNode }) {
+export default function Provider(props: JSX.IntrinsicAttributes & ThemeProviderProps) {
   return (
-    <Provider>
-      {props.children}
-    </Provider>
+    <ColorModeProvider defaultTheme="dark" {...props}>
+      <ChakraProvider value={defaultSystem}>
+        {props.children}
+      </ChakraProvider>
+    </ColorModeProvider>
   )
 }

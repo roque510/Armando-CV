@@ -1,8 +1,7 @@
 'use client'
 import Home from "@/components/Home"
 
-
-export default async function Page() {
+export default function Page() {
   return (
     <>
     {/* <ColorModeButton /> */}

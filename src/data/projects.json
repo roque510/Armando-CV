@@ -1,0 +1,39 @@
+{
+  "projects": [
+    {
+      "title": "An AI PDF Analyzer",
+      "description": "A tool that uses AI to analyze PDF files and extract information.",
+      "image": "/images/projects/pdf-analyzer.png",
+      "techStack": ["Next.js", "Chakra UI", "TypeScript", "OpenAI", "LangChain", "Python", "FastAPI", "Ollama", "Llama3"],
+      "link": "https://pdf-analyzer-sage.vercel.app/"
+    },
+    {
+      "title": "Tournament Manager App",
+      "description": "A full-featured tournament management app with real-time collaboration.",
+      "image": "/images/projects/tournament.png",
+      "techStack": ["React", "Node.js", "Firebase", "Next.js", "Tailwind CSS", "TypeScript", "Chakra UI", "Figma"],
+      "link": "http://roque-sportsv3.vercel.app/"
+    },
+    {
+      "title": "Ecommerce template Website",
+      "description": "A ecommerce template site to showcase my work, skills, and experience. Built with Next.js and Chakra UI for a modern, responsive design.",
+      "image": "/images/projects/ecommerce-template.png",
+      "techStack": ["Next.js", "Chakra UI", "TypeScript", "Tailwind CSS", "Figma"],
+      "link": "https://patchly.vercel.app/"
+    },
+    {
+      "title": "Escrow Landing Page",
+      "description": "A landing page for an escrow service. Built with Next.js and Chakra UI for a modern, responsive design.",
+      "image": "/images/projects/escrow.png",
+      "techStack": ["Next.js", "Chakra UI", "TypeScript", "Tailwind CSS", "Figma"],
+      "link": "https://escrow-nu.vercel.app/"
+    },
+    {
+      "title": "Slot Game Demo",
+      "description": "A demo of a slot game. Built with Next.js and Chakra UI for a modern, responsive design.",
+      "image": "/images/projects/slotgame.png",
+      "techStack": ["Angular", "TypeScript", "Tailwind CSS", "Figma"],
+      "link": "https://verdadero-catracho.vercel.app/"
+    }
+  ]
+} 
