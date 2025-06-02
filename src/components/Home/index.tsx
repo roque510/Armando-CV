@@ -26,6 +26,7 @@ export default function Home() {
   const colors = useColorModeValue("teal.800", "teal.200");
   const bg = useColorModeValue("teal.200", "teal.800");  
   const socialIconColor = useColorModeValue('#000', '#fff');
+  const seeMoreBtnBg = useColorModeValue("#319795", "#234E52");
 
   // Section refs for scrolling
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -285,7 +286,7 @@ export default function Home() {
                 <HStack justifyContent="center">
                   <button
                     style={{
-                      background: useColorModeValue("#319795", "#234E52"),
+                      background: seeMoreBtnBg,
                       color: "white",
                       border: "none",
                       borderRadius: 6,
