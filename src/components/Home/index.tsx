@@ -233,7 +233,7 @@ export default function Home() {
               someone who can ship, improve, and scale with your team, that&apos;s
               what I do best.
             </Text>
-            <Text>
+            <Text fontWeight="300" mt={4} color={useColorModeValue("gray.800", "white")}>
               <Highlight
                 styles={{ color: colors, bg: bg }}
                 query={[
