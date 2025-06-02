@@ -32,6 +32,7 @@ export default function Home() {
   const experienceRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const [activeSection, setActiveSection] = useState("experience");
+  const [visibleExperienceCount, setVisibleExperienceCount] = useState(5);
 
   const handleNavClick = (section: string) => {
     setActiveSection(section);
@@ -40,6 +41,8 @@ export default function Home() {
     if (section === "projects") ref = projectsRef;
     ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+
+  const handleSeeMore = () => setVisibleExperienceCount((prev) => prev + 5);
 
   return (
     <>
@@ -269,7 +272,7 @@ export default function Home() {
             {/* Experience Section */}
             <Box ref={experienceRef} mb={12} />
             <Stack mt={10} gap={8}>
-              {experienceData.experience.map((entry, index) => (
+              {experienceData.experience.slice(0, visibleExperienceCount).map((entry, index) => (
                 <ExperienceEntry
                   key={index}
                   timeframe={entry.timeframe}
@@ -278,6 +281,27 @@ export default function Home() {
                   techStack={entry.techStack}
                 />
               ))}
+              {visibleExperienceCount < experienceData.experience.length && (
+                <HStack justifyContent="center">
+                  <button
+                    style={{
+                      background: useColorModeValue("#319795", "#234E52"),
+                      color: "white",
+                      border: "none",
+                      borderRadius: 6,
+                      padding: "8px 20px",
+                      fontWeight: 600,
+                      cursor: "pointer",
+                      fontSize: 14,
+                      marginTop: 8,
+                      transition: "background 0.2s"
+                    }}
+                    onClick={handleSeeMore}
+                  >
+                    See more
+                  </button>
+                </HStack>
+              )}
             </Stack>
 
             {/* Projects Section Placeholder */}
