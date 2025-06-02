@@ -17,6 +17,7 @@ import { ColorModeButton, useColorModeValue } from "../ui/color-mode";
 import { ExperienceEntry } from "../ui/experience-entry";
 import { useRef, useState } from "react";
 import { LuDownload } from "react-icons/lu";
+import { FaLinkedin, FaGithub, FaCodepen } from "react-icons/fa";
 import experienceData from "../../data/experience.json";
 import { ProjectEntry } from "../ui/project-entry";
 import projectsData from "../../data/projects.json";
@@ -24,6 +25,8 @@ import projectsData from "../../data/projects.json";
 export default function Home() {
   const colors = useColorModeValue("teal.800", "teal.200");
   const bg = useColorModeValue("teal.200", "teal.800");
+  const socialIconFilter = useColorModeValue('invert(0)', 'invert(1)');
+  const socialIconColor = useColorModeValue('#000', '#fff');
 
   // Section refs for scrolling
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -58,10 +61,11 @@ export default function Home() {
             p={8}
             borderRadius={8}
             gap="1rem"
-            position={{ base: 'static', lg: 'sticky' }}
-            top={{ base: 0, lg: 0 }}
+            position="relative"
+            top={{ base: 0, lg: undefined }}
             alignSelf={{ base: 'auto', lg: 'flex-start' }}
-            height={{ base: 'auto', lg: 'fit-content' }}
+            display="flex"
+            flexDirection="column"
             zIndex={1}
           >
             <Stack direction={"row"} gap={"1rem"} alignItems={"center"}>
@@ -161,6 +165,26 @@ export default function Home() {
                 </HStack>
               ))}
             </Stack>
+            {/* Social Links at the bottom */}
+            <HStack
+              gap={3}              
+              left={0}
+              height={{base: "auto", lg: "90vh"}}
+              bottom={0}
+              width="100%"
+              justifyContent="center"
+              mt={{ base: 8, lg: 0 }}
+            >
+              <Link href="https://www.linkedin.com/in/armando-roque-547914133/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <FaLinkedin size={36} color={socialIconColor} />
+              </Link>
+              <Link href="https://github.com/roque510" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <FaGithub size={36} color={socialIconColor} />
+              </Link>
+              <Link href="https://codepen.io/aroque" target="_blank" rel="noopener noreferrer" aria-label="CodePen">
+                <FaCodepen size={36} color={socialIconColor} />
+              </Link>
+            </HStack>
           </Stack>
 
           {/* Right Column */}
