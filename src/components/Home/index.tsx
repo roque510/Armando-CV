@@ -24,8 +24,7 @@ import projectsData from "../../data/projects.json";
 
 export default function Home() {
   const colors = useColorModeValue("teal.800", "teal.200");
-  const bg = useColorModeValue("teal.200", "teal.800");
-  const socialIconFilter = useColorModeValue('invert(0)', 'invert(1)');
+  const bg = useColorModeValue("teal.200", "teal.800");  
   const socialIconColor = useColorModeValue('#000', '#fff');
 
   // Section refs for scrolling
