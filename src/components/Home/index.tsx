@@ -89,15 +89,17 @@ export default function Home() {
   return (
     <>
       <StarryBackground />
-      <Container 
-        maxW={"container.xl"} py={[5, 24]} px={[2, 12]} 
-        height={{ base: 'auto', lg: '100vh' }}
-        overflow={{ base: 'visible', lg: 'hidden' }}
+      <Container
+        maxW={"container.xl"}
+        py={[5, 24]}
+        px={[2, 12]}
+        height={{ base: "auto", lg: "100vh" }}
+        overflow={{ base: "visible", lg: "hidden" }}
       >
-        <Stack 
-          direction={{ base: "column", lg: "row" }} 
-          gap={4} 
-          height={{ base: 'auto', lg: '100%' }}
+        <Stack
+          direction={{ base: "column", lg: "row" }}
+          gap={4}
+          height={{ base: "auto", lg: "100%" }}
         >
           {/* Left Column */}
           <Stack
@@ -107,7 +109,7 @@ export default function Home() {
             gap="1rem"
             position="relative"
             top={{ base: 0, lg: undefined }}
-            alignSelf={{ base: 'auto', lg: 'flex-start' }}
+            alignSelf={{ base: "auto", lg: "flex-start" }}
             display="flex"
             flexDirection="column"
             zIndex={1}
@@ -118,13 +120,23 @@ export default function Home() {
                 src="/images/profile.png"
                 size="2xl"
               />
-              <Heading fontWeight={"800"} fontSize={"3em"} lineHeight={"1.2"} color={useColorModeValue("gray.800", "white")}>
+              <Heading
+                fontWeight={"800"}
+                fontSize={"3em"}
+                lineHeight={"1.2"}
+                color={useColorModeValue("gray.800", "white")}
+              >
                 Armando Roque
               </Heading>
             </Stack>
             <HStack>
               <ColorModeButton />
-              <Text fontWeight={"700"} color={useColorModeValue("gray.800", "white")}>Full Stack Software Engineer</Text>
+              <Text
+                fontWeight={"700"}
+                color={useColorModeValue("gray.800", "white")}
+              >
+                Full Stack Software Engineer
+              </Text>
             </HStack>
             <HStack>
               <Link
@@ -148,14 +160,22 @@ export default function Home() {
                 >
                   <LuDownload />
                 </IconButton>
-                <Text fontWeight={"500"} color={useColorModeValue("gray.800", "white")}>Download Resume</Text>
+                <Text
+                  fontWeight={"500"}
+                  color={useColorModeValue("gray.800", "white")}
+                >
+                  Download Resume
+                </Text>
               </Link>
             </HStack>
-            <Text fontWeight={"300"} color={useColorModeValue("gray.800", "white")}>
-              I&apos;m a full stack software engineer with a passion for building
-              scalable and efficient web applications.
+            <Text
+              fontWeight={"300"}
+              color={useColorModeValue("gray.800", "white")}
+            >
+              I&apos;m a full stack software engineer with a passion for
+              building scalable and efficient web applications.
             </Text>
-            
+
             {/* Responsive Section Navigation */}
             <Stack
               mt={{ base: 0, lg: 8 }}
@@ -167,9 +187,9 @@ export default function Home() {
               top={{ base: 0, lg: undefined }}
               left={{ base: 0, lg: undefined }}
               width={{ base: "100vw", lg: "auto" }}
-              zIndex={100}              
+              zIndex={100}
               px={{ base: 2, lg: 0 }}
-              py={{ base: 2, lg: 0 }}              
+              py={{ base: 2, lg: 0 }}
             >
               {[
                 { label: "About", key: "about" },
@@ -212,21 +232,36 @@ export default function Home() {
             </Stack>
             {/* Social Links at the bottom */}
             <HStack
-              gap={3}              
+              gap={3}
               left={0}
-              height={{base: "auto", lg: "90vh"}}
+              height={{ base: "auto", lg: "90vh" }}
               bottom={0}
               width="100%"
               justifyContent="center"
               mt={{ base: 8, lg: 0 }}
             >
-              <Link href="https://www.linkedin.com/in/armando-roque-547914133/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <Link
+                href="https://www.linkedin.com/in/armando-roque-547914133/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
                 <FaLinkedin size={36} color={socialIconColor} />
               </Link>
-              <Link href="https://github.com/roque510" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <Link
+                href="https://github.com/roque510"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
                 <FaGithub size={36} color={socialIconColor} />
               </Link>
-              <Link href="https://codepen.io/aroque" target="_blank" rel="noopener noreferrer" aria-label="CodePen">
+              <Link
+                href="https://codepen.io/aroque"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="CodePen"
+              >
                 <FaCodepen size={36} color={socialIconColor} />
               </Link>
             </HStack>
@@ -237,45 +272,61 @@ export default function Home() {
             flex={1}
             p={8}
             borderRadius={8}
-            overflowY={{ base: 'visible', lg: 'auto' }}
-            maxHeight={{ base: 'none', lg: '100vh' }}
-            pt={{ base: '64px', lg: 0 }}
+            overflowY={{ base: "visible", lg: "auto" }}
+            maxHeight={{ base: "none", lg: "100vh" }}
+            pt={{ base: "64px", lg: 0 }}
             css={{
               "@media (min-width: 62em)": {
-                '&::-webkit-scrollbar': { display: 'none' },
-                msOverflowStyle: 'none',
-                scrollbarWidth: 'none',
-              }
+                "&::-webkit-scrollbar": { display: "none" },
+                msOverflowStyle: "none",
+                scrollbarWidth: "none",
+              },
             }}
           >
             {/* About Section */}
             <Box ref={aboutRef} mb={12} />
-            <Heading fontWeight={"800"} fontSize={"1em"} lineHeight={"1.2"} color={useColorModeValue("gray.800", "white")}>
+            <Heading
+              fontWeight={"800"}
+              fontSize={"1em"}
+              lineHeight={"1.2"}
+              color={useColorModeValue("gray.800", "white")}
+            >
               About Me
             </Heading>
-            <Text fontWeight="300" color={useColorModeValue("gray.800", "white")}>
+            <Text
+              fontWeight="300"
+              color={useColorModeValue("gray.800", "white")}
+            >
               <Highlight
                 styles={{ color: colors, bg: bg }}
                 query="spearheading"
               >
-                I&apos;m a Full Stack Developer with 10+ years of experience building
-                fast, responsive apps across industries. I work with tools like
-                Next.js, React, Angular, and Node.js to create clean, scalable
-                solutions that users love. Whether I&apos;m spearheading new projects
-                or modernizing legacy systems, I focus on delivering great UX
-                with solid performance.
+                I&apos;m a Full Stack Developer with 10+ years of experience
+                building fast, responsive apps across industries. I work with
+                tools like Next.js, React, Angular, VueJS and Node.js to create
+                clean, scalable solutions that users love. Whether I&apos;m
+                spearheading new projects or modernizing legacy systems, I focus
+                on delivering great UX with solid performance.
               </Highlight>
             </Text>
-            
-            <Text fontWeight="300" mt={4} color={useColorModeValue("gray.800", "white")}>
-              I&apos;ve led full product builds—from real-time scheduling platforms
-              to admin dashboards and Stripe integrations—using PostgreSQL,
-              Prisma, GraphQL, and more. I move fast, communicate clearly, and
-              bring long-term thinking to every build. If you&apos;re looking for
-              someone who can ship, improve, and scale with your team, that&apos;s
-              what I do best.
+
+            <Text
+              fontWeight="300"
+              mt={4}
+              color={useColorModeValue("gray.800", "white")}
+            >
+              I&apos;ve led full product builds—from real-time scheduling
+              platforms to admin dashboards and Stripe integrations—using
+              PostgreSQL, Prisma, GraphQL, and more. I move fast, communicate
+              clearly, and bring long-term thinking to every build. If
+              you&apos;re looking for someone who can ship, improve, and scale
+              with your team, that&apos;s what I do best.
             </Text>
-            <Text fontWeight="300" mt={4} color={useColorModeValue("gray.800", "white")}>
+            <Text
+              fontWeight="300"
+              mt={4}
+              color={useColorModeValue("gray.800", "white")}
+            >
               <Highlight
                 styles={{ color: colors, bg: bg }}
                 query={[
@@ -285,10 +336,18 @@ export default function Home() {
                   "OpenAI's GPT series",
                 ]}
               >
-                I&apos;ve also built projects leveraging AI technologies, including LangChain and Ollama, integrating models like LLaMA 3 and OpenAI&apos;s GPT series. I&apos;m an active member of the Hugging Face community, where I explore and contribute to the latest in open-source machine learning tools.
+                I&apos;ve also built projects leveraging AI technologies,
+                including LangChain and Ollama, integrating models like LLaMA 3
+                and OpenAI&apos;s GPT series. I&apos;m an active member of the
+                Hugging Face community, where I explore and contribute to the
+                latest in open-source machine learning tools.
               </Highlight>
             </Text>
-            <Text fontWeight="300" mt={4} color={useColorModeValue("gray.800", "white")}>
+            <Text
+              fontWeight="300"
+              mt={4}
+              color={useColorModeValue("gray.800", "white")}
+            >
               <Highlight
                 styles={{ color: colors, bg: bg }}
                 query={[
@@ -299,16 +358,16 @@ export default function Home() {
                   "UptimePM",
                 ]}
               >
-                Over the years, I&apos;ve built impactful software for companies like
-                Qualpay, Squarecodex, Condoit, Liberty Furniture, and UptimePM.
-                At Qualpay, I improved real-time reporting for their payment
-                platform, helping businesses track transactions with greater
-                accuracy. At Squarecodex, I built a seamless scheduling app with
-                Stripe for certified professionals. At Condoit, I launched a
-                full admin system with Next.js. I&apos;ve also modernized legacy
-                systems at Liberty Furniture and delivered mobile-first tools at
-                UptimePM—each project pushing me to write cleaner, smarter code
-                that drives results.
+                Over the years, I&apos;ve built impactful software for companies
+                like Qualpay, Squarecodex, Condoit, Liberty Furniture, and
+                UptimePM. At Qualpay, I improved real-time reporting for their
+                payment platform, helping businesses track transactions with
+                greater accuracy. At Squarecodex, I built a seamless scheduling
+                app with Stripe for certified professionals. At Condoit, I
+                launched a full admin system with Next.js. I&apos;ve also
+                modernized legacy systems at Liberty Furniture and delivered
+                mobile-first tools at UptimePM—each project pushing me to write
+                cleaner, smarter code that drives results.
               </Highlight>
             </Text>
 
@@ -320,17 +379,19 @@ export default function Home() {
             {/* Experience Section */}
             <Box ref={experienceRef} mb={12} />
             <Stack mt={10} gap={8}>
-              {experienceData.experience.slice(0, visibleExperienceCount).map((entry, index) => (
-                <ExperienceEntry
-                  key={index}
-                  timeframe={entry.timeframe}
-                  title={entry.title}
-                  description={entry.description}
-                  techStack={entry.techStack}
-                  highlightedTech={highlightedTech || undefined}
-                  isHighlighted={highlightedExperiences.includes(index)}
-                />
-              ))}
+              {experienceData.experience
+                .slice(0, visibleExperienceCount)
+                .map((entry, index) => (
+                  <ExperienceEntry
+                    key={index}
+                    timeframe={entry.timeframe}
+                    title={entry.title}
+                    description={entry.description}
+                    techStack={entry.techStack}
+                    highlightedTech={highlightedTech || undefined}
+                    isHighlighted={highlightedExperiences.includes(index)}
+                  />
+                ))}
               {visibleExperienceCount < experienceData.experience.length && (
                 <HStack justifyContent="center">
                   <button
@@ -344,7 +405,7 @@ export default function Home() {
                       cursor: "pointer",
                       fontSize: 14,
                       marginTop: 8,
-                      transition: "background 0.2s"
+                      transition: "background 0.2s",
                     }}
                     onClick={handleSeeMore}
                   >
@@ -356,7 +417,13 @@ export default function Home() {
 
             {/* Projects Section Placeholder */}
             <Box ref={projectsRef} mb={12} />
-            <Heading fontWeight="800" fontSize="1em" lineHeight="1.2" color={useColorModeValue("gray.500", "gray.200") } mb={4}>
+            <Heading
+              fontWeight="800"
+              fontSize="1em"
+              lineHeight="1.2"
+              color={useColorModeValue("gray.500", "gray.200")}
+              mb={4}
+            >
               Projects
             </Heading>
             <Stack gap={8}>
