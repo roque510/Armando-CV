@@ -117,21 +117,22 @@ export function SkillsSection({ onSkillClick }: SkillsSectionProps) {
   return (
     <VStack align="stretch" gap={6}>
       <Box>
-        <Heading 
-          fontWeight="800" 
-          fontSize="1em" 
-          lineHeight="1.2" 
-          color={textColor} 
+        <Heading
+          fontWeight="800"
+          fontSize="1em"
+          lineHeight="1.2"
+          color={textColor}
           mb={4}
         >
           Skills & Technologies
         </Heading>
-        
+
         {/* Compact view with expand button */}
         {!shouldShowSkills && (
           <HStack justify="space-between" align="center">
             <Text color={placeholderColor} fontSize="sm">
-              {allSkills.length} technologies across {Object.keys(skillsData.skills).length} categories
+              {allSkills.length} technologies across{" "}
+              {Object.keys(skillsData.skills).length} categories
             </Text>
             <Button
               variant="outline"
@@ -145,7 +146,7 @@ export function SkillsSection({ onSkillClick }: SkillsSectionProps) {
                 bg: "teal.500",
                 borderColor: "teal.500",
                 color: "white",
-                transform: "translateY(-1px)"
+                transform: "translateY(-1px)",
               }}
               _dark={{
                 color: "teal.300",
@@ -153,12 +154,12 @@ export function SkillsSection({ onSkillClick }: SkillsSectionProps) {
                 _hover: {
                   bg: "teal.600",
                   borderColor: "teal.600",
-                  color: "white"
-                }
+                  color: "white",
+                },
               }}
               transition="all 0.2s"
             >
-              View Skills <FiChevronDown style={{ marginLeft: '8px' }} />
+              View Skills <FiChevronDown style={{ marginLeft: "8px" }} />
             </Button>
           </HStack>
         )}
@@ -178,7 +179,7 @@ export function SkillsSection({ onSkillClick }: SkillsSectionProps) {
                   _placeholder={{ color: placeholderColor }}
                   _focus={{
                     borderColor: focusBorderColor,
-                    boxShadow: `0 0 0 1px ${focusBoxShadow}`
+                    boxShadow: `0 0 0 1px ${focusBoxShadow}`,
                   }}
                   pl={10}
                 />
@@ -207,7 +208,7 @@ export function SkillsSection({ onSkillClick }: SkillsSectionProps) {
                   bg: "teal.500",
                   borderColor: "teal.500",
                   color: "white",
-                  transform: "translateY(-1px)"
+                  transform: "translateY(-1px)",
                 }}
                 _dark={{
                   color: "teal.300",
@@ -215,15 +216,15 @@ export function SkillsSection({ onSkillClick }: SkillsSectionProps) {
                   _hover: {
                     bg: "teal.600",
                     borderColor: "teal.600",
-                    color: "white"
-                  }
+                    color: "white",
+                  },
                 }}
                 transition="all 0.2s"
               >
-                <FiChevronUp style={{ marginRight: '8px' }} /> Collapse
+                <FiChevronUp style={{ marginRight: "8px" }} /> Collapse
               </Button>
             </HStack>
-            
+
             {searchTerm && (
               <Text fontSize="sm" color={placeholderColor}>
                 {filteredSkills.length} skills found
@@ -244,123 +245,143 @@ export function SkillsSection({ onSkillClick }: SkillsSectionProps) {
 
           {!searchTerm && (
             <Stack gap={6}>
-              {Object.entries(skillsData.skills as SkillsData).map(([section, skills]) => (
-                <Box key={section}>
-                  <Text 
-                    fontSize="sm" 
-                    fontWeight="600" 
-                    color={sectionTitleColor} 
-                    mb={3}
-                    textTransform="uppercase"
-                    letterSpacing="wider"
-                  >
-                    {sectionTitles[section]}
-                  </Text>
-                  <Wrap gap={2}>
-                    {skills.map((skill, index) => (
-                      <WrapItem key={index}>
-                        <Box
-                          bg={skillCardBg}
-                          borderRadius="lg"
-                          p={3}
-                          border="1px solid"
-                          borderColor={skillCardBorder}
-                          _hover={{
-                            borderColor: skillCardHoverBorder,
-                            transform: "translateY(-1px)",
-                            boxShadow: "sm",
-                            cursor: onSkillClick ? "pointer" : "default"
-                          }}
-                          transition="all 0.2s"
-                          onClick={() => onSkillClick?.(skill.name)}
-                          title={onSkillClick ? `Click to see experiences using ${skill.name}` : undefined}
-                        >
-                          <VStack gap={1} align="center">
-                            <Text
-                              fontSize="sm"
-                              fontWeight="600"
-                              color={textColor}
-                              textAlign="center"
-                            >
-                              {skill.name}
-                            </Text>
-                            <Badge
-                              colorScheme={experienceColors[skill.experience as keyof typeof experienceColors]}
-                              size="sm"
-                              borderRadius="full"
-                              fontSize="xs"
-                              px={2}
-                            >
-                              {skill.experience}
-                            </Badge>
-                          </VStack>
-                        </Box>
-                      </WrapItem>
-                    ))}
-                  </Wrap>
-                </Box>
-              ))}
+              {Object.entries(skillsData.skills as SkillsData).map(
+                ([section, skills]) => (
+                  <Box key={section}>
+                    <Text
+                      fontSize="sm"
+                      fontWeight="600"
+                      color={sectionTitleColor}
+                      mb={3}
+                      textTransform="uppercase"
+                      letterSpacing="wider"
+                    >
+                      {sectionTitles[section]}
+                    </Text>
+                    <Wrap gap={2}>
+                      {skills.map((skill, index) => (
+                        <WrapItem key={index}>
+                          <Box
+                            bg={skillCardBg}
+                            borderRadius="lg"
+                            p={3}
+                            border="1px solid"
+                            borderColor={skillCardBorder}
+                            _hover={{
+                              borderColor: skillCardHoverBorder,
+                              transform: "translateY(-1px)",
+                              boxShadow: "sm",
+                              cursor: onSkillClick ? "pointer" : "default",
+                            }}
+                            transition="all 0.2s"
+                            onClick={() => onSkillClick?.(skill.name)}
+                            title={
+                              onSkillClick
+                                ? `Click to see experiences using ${skill.name}`
+                                : undefined
+                            }
+                          >
+                            <VStack gap={1} align="center">
+                              <Text
+                                fontSize="sm"
+                                fontWeight="600"
+                                color={textColor}
+                                textAlign="center"
+                              >
+                                {skill.name}
+                              </Text>
+                              <Badge
+                                colorScheme={
+                                  experienceColors[
+                                    skill.experience as keyof typeof experienceColors
+                                  ]
+                                }
+                                size="sm"
+                                borderRadius="full"
+                                fontSize="xs"
+                                px={2}
+                              >
+                                {skill.experience}
+                              </Badge>
+                            </VStack>
+                          </Box>
+                        </WrapItem>
+                      ))}
+                    </Wrap>
+                  </Box>
+                )
+              )}
             </Stack>
           )}
 
           {searchTerm && filteredSkills.length > 0 && (
             <Stack gap={6}>
-              {Object.entries(groupedFilteredSkills).map(([section, skills]) => (
-                <Box key={section}>
-                  <Text 
-                    fontSize="sm" 
-                    fontWeight="600" 
-                    color={sectionTitleColor} 
-                    mb={3}
-                    textTransform="uppercase"
-                    letterSpacing="wider"
-                  >
-                    {sectionTitles[section]} ({skills.length})
-                  </Text>
-                  <Wrap gap={2}>
-                    {skills.map((skill, index) => (
-                      <WrapItem key={index}>
-                        <Box
-                          bg={searchCardBg}
-                          borderRadius="lg"
-                          p={3}
-                          border="2px solid"
-                          borderColor={searchCardBorder}
-                          _hover={{
-                            borderColor: searchCardHoverBorder,
-                            transform: "translateY(-1px)",
-                            boxShadow: "md",
-                            cursor: onSkillClick ? "pointer" : "default"
-                          }}
-                          transition="all 0.2s"
-                          onClick={() => onSkillClick?.(skill.name)}
-                          title={onSkillClick ? `Click to see experiences using ${skill.name}` : undefined}
-                        >
-                          <VStack gap={1} align="center">
-                            <Text
-                              fontSize="sm"
-                              fontWeight="600"
-                              color={searchCardTextColor}
-                              textAlign="center"
-                            >
-                              {skill.name}
-                            </Text>
-                            <Badge
-                              colorScheme={experienceColors[skill.experience as keyof typeof experienceColors]}
-                              size="sm"
-                              borderRadius="full"
-                              fontSize="xs"
-                              px={2}
-                            >
-                              {skill.experience}
-                            </Badge>
-                          </VStack>
-                        </Box>
-                      </WrapItem>
-                    ))}
-                  </Wrap>
-                </Box>
-              ))}
+              {Object.entries(groupedFilteredSkills).map(
+                ([section, skills]) => (
+                  <Box key={section}>
+                    <Text
+                      fontSize="sm"
+                      fontWeight="600"
+                      color={sectionTitleColor}
+                      mb={3}
+                      textTransform="uppercase"
+                      letterSpacing="wider"
+                    >
+                      {sectionTitles[section]} ({skills.length})
+                    </Text>
+                    <Wrap gap={2}>
+                      {skills.map((skill, index) => (
+                        <WrapItem key={index}>
+                          <Box
+                            bg={searchCardBg}
+                            borderRadius="lg"
+                            p={3}
+                            border="2px solid"
+                            borderColor={searchCardBorder}
+                            _hover={{
+                              borderColor: searchCardHoverBorder,
+                              transform: "translateY(-1px)",
+                              boxShadow: "md",
+                              cursor: onSkillClick ? "pointer" : "default",
+                            }}
+                            transition="all 0.2s"
+                            onClick={() => onSkillClick?.(skill.name)}
+                            title={
+                              onSkillClick
+                                ? `Click to see experiences using ${skill.name}`
+                                : undefined
+                            }
+                          >
+                            <VStack gap={1} align="center">
+                              <Text
+                                fontSize="sm"
+                                fontWeight="600"
+                                color={searchCardTextColor}
+                                textAlign="center"
+                              >
+                                {skill.name}
+                              </Text>
+                              <Badge
+                                colorScheme={
+                                  experienceColors[
+                                    skill.experience as keyof typeof experienceColors
+                                  ]
+                                }
+                                size="sm"
+                                borderRadius="full"
+                                fontSize="xs"
+                                px={2}
+                              >
+                                {skill.experience}
+                              </Badge>
+                            </VStack>
+                          </Box>
+                        </WrapItem>
+                      ))}
+                    </Wrap>
+                  </Box>
+                )
+              )}
             </Stack>
           )}
         </>
