@@ -134,10 +134,29 @@ export function SkillsSection({ onSkillClick }: SkillsSectionProps) {
               {allSkills.length} technologies across {Object.keys(skillsData.skills).length} categories
             </Text>
             <Button
-              variant="ghost"
+              variant="outline"
               size="sm"
               onClick={() => setIsExpanded(true)}
               colorScheme="teal"
+              borderWidth="2px"
+              borderColor="teal.400"
+              color="teal.600"
+              _hover={{
+                bg: "teal.500",
+                borderColor: "teal.500",
+                color: "white",
+                transform: "translateY(-1px)"
+              }}
+              _dark={{
+                color: "teal.300",
+                borderColor: "teal.300",
+                _hover: {
+                  bg: "teal.600",
+                  borderColor: "teal.600",
+                  color: "white"
+                }
+              }}
+              transition="all 0.2s"
             >
               View Skills <FiChevronDown style={{ marginLeft: '8px' }} />
             </Button>
@@ -174,13 +193,32 @@ export function SkillsSection({ onSkillClick }: SkillsSectionProps) {
                 </Box>
               </Box>
               <Button
-                variant="ghost"
+                variant="outline"
                 size="sm"
                 onClick={() => {
                   setIsExpanded(false);
                   setSearchTerm("");
                 }}
                 colorScheme="teal"
+                borderWidth="2px"
+                borderColor="teal.400"
+                color="teal.600"
+                _hover={{
+                  bg: "teal.500",
+                  borderColor: "teal.500",
+                  color: "white",
+                  transform: "translateY(-1px)"
+                }}
+                _dark={{
+                  color: "teal.300",
+                  borderColor: "teal.300",
+                  _hover: {
+                    bg: "teal.600",
+                    borderColor: "teal.600",
+                    color: "white"
+                  }
+                }}
+                transition="all 0.2s"
               >
                 <FiChevronUp style={{ marginRight: '8px' }} /> Collapse
               </Button>
