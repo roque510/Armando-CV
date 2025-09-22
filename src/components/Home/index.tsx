@@ -15,6 +15,7 @@ import { Avatar } from "../ui/avatar";
 import { StarryBackground } from "../ui/starry-background";
 import { ColorModeButton, useColorModeValue } from "../ui/color-mode";
 import { ExperienceEntry } from "../ui/experience-entry";
+import { SkillsSection } from "../ui/skills-section";
 import { useRef, useState } from "react";
 import { LuDownload } from "react-icons/lu";
 import { FaLinkedin, FaGithub, FaCodepen } from "react-icons/fa";
@@ -30,20 +31,60 @@ export default function Home() {
 
   // Section refs for scrolling
   const aboutRef = useRef<HTMLDivElement>(null);
+  const skillsRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const [activeSection, setActiveSection] = useState("experience");
   const [visibleExperienceCount, setVisibleExperienceCount] = useState(5);
+  const [highlightedTech, setHighlightedTech] = useState<string | null>(null);
+  const [highlightedExperiences, setHighlightedExperiences] = useState<number[]>([]);
 
   const handleNavClick = (section: string) => {
     setActiveSection(section);
     let ref = aboutRef;
+    if (section === "skills") ref = skillsRef;
     if (section === "experience") ref = experienceRef;
     if (section === "projects") ref = projectsRef;
     ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const handleSeeMore = () => setVisibleExperienceCount((prev) => prev + 5);
+
+  const handleSkillClick = (skillName: string) => {
+    // Find experiences that use this skill
+    const matchingExperiences: number[] = [];
+    experienceData.experience.forEach((exp, index) => {
+      const hasSkill = exp.techStack.some(tech => 
+        tech.toLowerCase().includes(skillName.toLowerCase()) ||
+        skillName.toLowerCase().includes(tech.toLowerCase())
+      );
+      if (hasSkill) {
+        matchingExperiences.push(index);
+      }
+    });
+
+    if (matchingExperiences.length > 0) {
+      // Set highlighting
+      setHighlightedTech(skillName);
+      setHighlightedExperiences(matchingExperiences);
+      
+      // Navigate to experience section
+      setActiveSection("experience");
+      experienceRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      
+      // Expand experience section if needed to show all matching experiences
+      const maxMatchingIndex = Math.max(...matchingExperiences);
+      if (maxMatchingIndex >= visibleExperienceCount) {
+        setVisibleExperienceCount(Math.max(visibleExperienceCount, maxMatchingIndex + 1));
+      }
+
+      // Clear highlighting after 5 seconds
+      setTimeout(() => {
+        setHighlightedTech(null);
+        setHighlightedExperiences([]);
+      }, 5000);
+    }
+  };
 
   return (
     <>
@@ -132,6 +173,7 @@ export default function Home() {
             >
               {[
                 { label: "About", key: "about" },
+                { label: "Skills", key: "skills" },
                 { label: "Experience", key: "experience" },
                 { label: "Projects", key: "projects" },
               ].map((item) => (
@@ -270,6 +312,11 @@ export default function Home() {
               </Highlight>
             </Text>
 
+            {/* Skills Section */}
+            <Box ref={skillsRef} mt={10} mb={8}>
+              <SkillsSection onSkillClick={handleSkillClick} />
+            </Box>
+
             {/* Experience Section */}
             <Box ref={experienceRef} mb={12} />
             <Stack mt={10} gap={8}>
@@ -280,6 +327,8 @@ export default function Home() {
                   title={entry.title}
                   description={entry.description}
                   techStack={entry.techStack}
+                  highlightedTech={highlightedTech || undefined}
+                  isHighlighted={highlightedExperiences.includes(index)}
                 />
               ))}
               {visibleExperienceCount < experienceData.experience.length && (

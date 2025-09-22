@@ -1,0 +1,77 @@
+{
+  "skills": {
+    "frontend": [
+      { "name": "React", "category": "Framework", "experience": "Expert" },
+      { "name": "Next.js", "category": "Framework", "experience": "Expert" },
+      { "name": "Vue.js", "category": "Framework", "experience": "Advanced" },
+      { "name": "Composition API", "category": "Vue Feature", "experience": "Advanced" },
+      { "name": "Angular", "category": "Framework", "experience": "Advanced" },
+      { "name": "TypeScript", "category": "Language", "experience": "Expert" },
+      { "name": "JavaScript", "category": "Language", "experience": "Expert" },
+      { "name": "HTML5", "category": "Language", "experience": "Expert" },
+      { "name": "CSS3", "category": "Language", "experience": "Expert" },
+      { "name": "Chakra UI", "category": "UI Library", "experience": "Advanced" },
+      { "name": "Element Plus", "category": "UI Library", "experience": "Intermediate" },
+      { "name": "Tailwind CSS", "category": "CSS Framework", "experience": "Advanced" },
+      { "name": "Vite", "category": "Build Tool", "experience": "Advanced" },
+      { "name": "Webpack", "category": "Build Tool", "experience": "Intermediate" }
+    ],
+    "backend": [
+      { "name": "Node.js", "category": "Runtime", "experience": "Expert" },
+      { "name": "Express", "category": "Framework", "experience": "Advanced" },
+      { "name": "GraphQL", "category": "API", "experience": "Advanced" },
+      { "name": "REST API", "category": "API", "experience": "Expert" },
+      { "name": "RESTful Services", "category": "API", "experience": "Expert" },
+      { "name": ".NET", "category": "Framework", "experience": "Intermediate" },
+      { "name": "PostgreSQL", "category": "Database", "experience": "Advanced" },
+      { "name": "MongoDB", "category": "Database", "experience": "Advanced" },
+      { "name": "Firebase", "category": "Backend Service", "experience": "Advanced" },
+      { "name": "Prisma", "category": "ORM", "experience": "Advanced" },
+      { "name": "SQL Server", "category": "Database", "experience": "Intermediate" },
+      { "name": "Oracle", "category": "Database", "experience": "Intermediate" },
+      { "name": "RavenDB", "category": "Database", "experience": "Intermediate" }
+    ],
+    "devops": [
+      { "name": "AWS", "category": "Cloud Platform", "experience": "Advanced" },
+      { "name": "AWS S3", "category": "Cloud Storage", "experience": "Advanced" },
+      { "name": "Docker", "category": "Containerization", "experience": "Intermediate" },
+      { "name": "Git", "category": "Version Control", "experience": "Expert" },
+      { "name": "GitHub", "category": "Version Control", "experience": "Expert" }
+    ],
+    "mobile": [
+      { "name": "React Native", "category": "Framework", "experience": "Advanced" }
+    ],
+    "tools": [
+      { "name": "Stripe", "category": "Payment Processing", "experience": "Advanced" },
+      { "name": "Stripe.js", "category": "Payment Processing", "experience": "Advanced" },
+      { "name": "Socket.io", "category": "Real-time Communication", "experience": "Advanced" },
+      { "name": "Twilio", "category": "Communication API", "experience": "Intermediate" },
+      { "name": "Chart.js", "category": "Data Visualization", "experience": "Advanced" },
+      { "name": "Axios", "category": "HTTP Client", "experience": "Expert" },
+      { "name": "Tanstack Query", "category": "Data Fetching", "experience": "Advanced" },
+      { "name": "Tanstack Table", "category": "Data Grid", "experience": "Advanced" },
+      { "name": "Vuex", "category": "State Management", "experience": "Advanced" },
+      { "name": "Redux", "category": "State Management", "experience": "Advanced" },
+      { "name": "State Management", "category": "General", "experience": "Advanced" },
+      { "name": "RxJS", "category": "Reactive Programming", "experience": "Advanced" },
+      { "name": "Microsoft Framework", "category": "Framework", "experience": "Intermediate" }
+    ],
+    "languages": [
+      { "name": "JavaScript", "category": "Programming Language", "experience": "Expert" },
+      { "name": "TypeScript", "category": "Programming Language", "experience": "Expert" },
+      { "name": "Python", "category": "Programming Language", "experience": "Advanced" },
+      { "name": "C#", "category": "Programming Language", "experience": "Intermediate" },
+      { "name": "SQL", "category": "Query Language", "experience": "Advanced" }
+    ],
+    "ai_ml": [
+      { "name": "LangChain", "category": "AI Framework", "experience": "Intermediate" },
+      { "name": "Ollama", "category": "AI Platform", "experience": "Intermediate" },
+      { "name": "OpenAI GPT", "category": "AI Model", "experience": "Intermediate" },
+      { "name": "LLaMA 3", "category": "AI Model", "experience": "Intermediate" },
+      { "name": "Hugging Face", "category": "ML Platform", "experience": "Intermediate" },
+      { "name": "Machine Learning", "category": "Technology", "experience": "Intermediate" },
+      { "name": "Natural Language Processing", "category": "Technology", "experience": "Intermediate" },
+      { "name": "PDF Processing", "category": "Document Processing", "experience": "Intermediate" }
+    ]
+  }
+}

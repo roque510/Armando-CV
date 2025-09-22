@@ -9,9 +9,11 @@ interface ExperienceEntryProps {
   title: string
   description: string
   techStack: string[]
+  highlightedTech?: string
+  isHighlighted?: boolean
 }
 
-export const ExperienceEntry = ({ timeframe, title, description, techStack }: ExperienceEntryProps) => {
+export const ExperienceEntry = ({ timeframe, title, description, techStack, highlightedTech, isHighlighted }: ExperienceEntryProps) => {
   const scrollRef = useRef<HTMLDivElement>(null)
 
   const scroll = (direction: 'left' | 'right') => {
@@ -32,7 +34,22 @@ export const ExperienceEntry = ({ timeframe, title, description, techStack }: Ex
   const secondaryTextColor = useColorModeValue('gray.500', 'gray.300')
 
   return (
-    <Box>
+    <Box 
+      p={isHighlighted ? 4 : 0}
+      borderRadius={isHighlighted ? "lg" : "none"}
+      bg={isHighlighted ? useColorModeValue("teal.50", "teal.900") : "transparent"}
+      border={isHighlighted ? "2px solid" : "none"}
+      borderColor={isHighlighted ? useColorModeValue("teal.200", "teal.600") : "transparent"}
+      transition="all 0.3s ease-in-out"
+      animation={isHighlighted ? "pulse 2s ease-in-out" : "none"}
+      css={{
+        "@keyframes pulse": {
+          "0%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.02)" },
+          "100%": { transform: "scale(1)" }
+        }
+      }}
+    >
       <Stack direction={{ base: "column", md: "row" }} gap={2}>
         <Text width={{ base: "100%", md: "100px" }} whiteSpace="nowrap" color={secondaryTextColor} fontSize="sm">{timeframe}</Text>
         <Stack gap={1} flex={1}>
@@ -75,22 +92,30 @@ export const ExperienceEntry = ({ timeframe, title, description, techStack }: Ex
               }
             }}
           >
-            {techStack.map((tech, index) => (
-              <Box 
-                key={index}
-                px={2}
-                py={0.5}
-                borderRadius="full"
-                bg="teal.500"
-                color="white"
-                fontSize="xs"
-                whiteSpace="nowrap"
-                flexShrink={0}
-                minWidth="fit-content"
-              >
-                {tech}
-              </Box>
-            ))}
+            {techStack.map((tech, index) => {
+              const isHighlightedTech = highlightedTech && tech.toLowerCase().includes(highlightedTech.toLowerCase())
+              return (
+                <Box 
+                  key={index}
+                  px={2}
+                  py={0.5}
+                  borderRadius="full"
+                  bg={isHighlightedTech ? "orange.400" : "teal.500"}
+                  color="white"
+                  fontSize="xs"
+                  whiteSpace="nowrap"
+                  flexShrink={0}
+                  minWidth="fit-content"
+                  fontWeight={isHighlightedTech ? "bold" : "normal"}
+                  transform={isHighlightedTech ? "scale(1.1)" : "scale(1)"}
+                  transition="all 0.2s"
+                  border={isHighlightedTech ? "2px solid" : "none"}
+                  borderColor={isHighlightedTech ? "orange.200" : "transparent"}
+                >
+                  {tech}
+                </Box>
+              )
+            })}
           </HStack>
         </Box>
         <IconButton

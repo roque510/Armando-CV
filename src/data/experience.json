@@ -1,6 +1,22 @@
 {
   "experience": [
     {
+      "timeframe": "2025",
+      "title": "AI-Powered Document Intelligence System (Personal Project)",
+      "description": "Developed an intelligent document processing system that extracts and analyzes information from PDFs using advanced AI technologies. The system employs LangChain for orchestrating AI workflows, integrates multiple LLM models including OpenAI GPT and LLaMA 3 via Ollama for different processing stages. Implemented decision-making logic that dynamically selects optimal AI models based on document complexity and data requirements. Features include automated data extraction, intelligent content summarization, and adaptive model chaining for enhanced accuracy and performance optimization.",
+      "techStack": [
+        "LangChain",
+        "OpenAI GPT",
+        "LLaMA 3",
+        "Ollama",
+        "Python",
+        "Hugging Face",
+        "PDF Processing",
+        "Machine Learning",
+        "Natural Language Processing"
+      ]
+    },
+    {
       "timeframe": "2023 - 2025",
       "title": "Fullstack Engineer at Qualpay",
       "description": "At Qualpay, I improved real-time reporting and reconciliation tools used by businesses to track payments. I optimized backend performance and streamlined frontend workflows for faster insights. My work helped reduce operational friction and improved data accuracy for merchants. It was a key contribution to a high-performance, enterprise-grade payment platform.",
@@ -43,7 +59,23 @@
       ]
     },
     {
-      "timeframe": "2022",
+      "timeframe": "2022 - 2023",
+      "title": "Vue.js Frontend Developer at InnovateTech Solutions",
+      "description": "Developed a comprehensive e-commerce dashboard and inventory management system using Vue.js 3 with Composition API. Implemented real-time inventory tracking, integrated payment gateways, and built responsive data visualization components. Utilized Vuex for state management and optimized performance with lazy loading and code splitting. The application handled complex product catalogs and real-time updates, serving over 10,000 daily active users.",
+      "techStack": [
+        "Vue.js 3",
+        "Composition API",
+        "Vuex",
+        "TypeScript",
+        "Vite",
+        "Element Plus",
+        "Chart.js",
+        "Axios",
+        "Firebase"
+      ]
+    },
+    {
+      "timeframe": "2021 - 2022",
       "title": "NextJS Developer at Uptimepm",
       "description": "As a Full Stack Engineer, I drove the upgrade of key applications using modern web and mobile technologies, enhancing a platform dedicated to vehicle maintenance management. Developed robust features for maintenance and cost tracking, and contributed to a React Native app for mechanics and operators.",
       "techStack": [
