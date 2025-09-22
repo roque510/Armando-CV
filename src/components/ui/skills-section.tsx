@@ -46,6 +46,18 @@ export function SkillsSection({ onSkillClick }: SkillsSectionProps) {
   const borderColor = useColorModeValue("gray.200", "gray.600");
   const textColor = useColorModeValue("gray.800", "white");
   const placeholderColor = useColorModeValue("gray.500", "gray.400");
+  
+  // Pre-calculate all color values to avoid hooks in callbacks
+  const skillCardBg = useColorModeValue("gray.50", "gray.700");
+  const skillCardBorder = useColorModeValue("gray.200", "gray.600");
+  const skillCardHoverBorder = useColorModeValue("teal.300", "teal.500");
+  const searchCardBg = useColorModeValue("teal.50", "teal.900");
+  const searchCardBorder = useColorModeValue("teal.200", "teal.600");
+  const searchCardHoverBorder = useColorModeValue("teal.400", "teal.400");
+  const searchCardTextColor = useColorModeValue("teal.700", "teal.100");
+  const sectionTitleColor = useColorModeValue("gray.600", "gray.300");
+  const focusBorderColor = useColorModeValue("teal.500", "teal.300");
+  const focusBoxShadow = useColorModeValue("#319795", "#4FD1C7");
 
   // Flatten all skills into a searchable array
   const allSkills = useMemo(() => {
@@ -146,8 +158,8 @@ export function SkillsSection({ onSkillClick }: SkillsSectionProps) {
                   color={textColor}
                   _placeholder={{ color: placeholderColor }}
                   _focus={{
-                    borderColor: useColorModeValue("teal.500", "teal.300"),
-                    boxShadow: `0 0 0 1px ${useColorModeValue("#319795", "#4FD1C7")}`
+                    borderColor: focusBorderColor,
+                    boxShadow: `0 0 0 1px ${focusBoxShadow}`
                   }}
                   pl={10}
                 />
@@ -188,7 +200,7 @@ export function SkillsSection({ onSkillClick }: SkillsSectionProps) {
         <>
           {searchTerm && filteredSkills.length === 0 && (
             <Text color={placeholderColor} textAlign="center" py={4}>
-              No skills found matching "{searchTerm}"
+              No skills found matching &ldquo;{searchTerm}&rdquo;
             </Text>
           )}
 
@@ -199,7 +211,7 @@ export function SkillsSection({ onSkillClick }: SkillsSectionProps) {
                   <Text 
                     fontSize="sm" 
                     fontWeight="600" 
-                    color={useColorModeValue("gray.600", "gray.300")} 
+                    color={sectionTitleColor} 
                     mb={3}
                     textTransform="uppercase"
                     letterSpacing="wider"
@@ -210,13 +222,13 @@ export function SkillsSection({ onSkillClick }: SkillsSectionProps) {
                     {skills.map((skill, index) => (
                       <WrapItem key={index}>
                         <Box
-                          bg={useColorModeValue("gray.50", "gray.700")}
+                          bg={skillCardBg}
                           borderRadius="lg"
                           p={3}
                           border="1px solid"
-                          borderColor={useColorModeValue("gray.200", "gray.600")}
+                          borderColor={skillCardBorder}
                           _hover={{
-                            borderColor: useColorModeValue("teal.300", "teal.500"),
+                            borderColor: skillCardHoverBorder,
                             transform: "translateY(-1px)",
                             boxShadow: "sm",
                             cursor: onSkillClick ? "pointer" : "default"
@@ -260,7 +272,7 @@ export function SkillsSection({ onSkillClick }: SkillsSectionProps) {
                   <Text 
                     fontSize="sm" 
                     fontWeight="600" 
-                    color={useColorModeValue("gray.600", "gray.300")} 
+                    color={sectionTitleColor} 
                     mb={3}
                     textTransform="uppercase"
                     letterSpacing="wider"
@@ -271,13 +283,13 @@ export function SkillsSection({ onSkillClick }: SkillsSectionProps) {
                     {skills.map((skill, index) => (
                       <WrapItem key={index}>
                         <Box
-                          bg={useColorModeValue("teal.50", "teal.900")}
+                          bg={searchCardBg}
                           borderRadius="lg"
                           p={3}
                           border="2px solid"
-                          borderColor={useColorModeValue("teal.200", "teal.600")}
+                          borderColor={searchCardBorder}
                           _hover={{
-                            borderColor: useColorModeValue("teal.400", "teal.400"),
+                            borderColor: searchCardHoverBorder,
                             transform: "translateY(-1px)",
                             boxShadow: "md",
                             cursor: onSkillClick ? "pointer" : "default"
@@ -290,7 +302,7 @@ export function SkillsSection({ onSkillClick }: SkillsSectionProps) {
                             <Text
                               fontSize="sm"
                               fontWeight="600"
-                              color={useColorModeValue("teal.700", "teal.100")}
+                              color={searchCardTextColor}
                               textAlign="center"
                             >
                               {skill.name}

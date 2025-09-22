@@ -32,14 +32,16 @@ export const ExperienceEntry = ({ timeframe, title, description, techStack, high
 
   const textColor = useColorModeValue('gray.800', 'white')
   const secondaryTextColor = useColorModeValue('gray.500', 'gray.300')
+  const highlightedBg = useColorModeValue("teal.50", "teal.900")
+  const highlightedBorder = useColorModeValue("teal.200", "teal.600")
 
   return (
     <Box 
       p={isHighlighted ? 4 : 0}
       borderRadius={isHighlighted ? "lg" : "none"}
-      bg={isHighlighted ? useColorModeValue("teal.50", "teal.900") : "transparent"}
+      bg={isHighlighted ? highlightedBg : "transparent"}
       border={isHighlighted ? "2px solid" : "none"}
-      borderColor={isHighlighted ? useColorModeValue("teal.200", "teal.600") : "transparent"}
+      borderColor={isHighlighted ? highlightedBorder : "transparent"}
       transition="all 0.3s ease-in-out"
       animation={isHighlighted ? "pulse 2s ease-in-out" : "none"}
       css={{

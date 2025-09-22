@@ -23,13 +23,38 @@
       { "name": "REST API", "category": "API", "experience": "Expert" },
       { "name": "RESTful Services", "category": "API", "experience": "Expert" },
       { "name": ".NET", "category": "Framework", "experience": "Intermediate" },
-      { "name": "PostgreSQL", "category": "Database", "experience": "Advanced" },
+      {
+        "name": "PostgreSQL",
+        "category": "Database",
+        "experience": "Advanced"
+      },
       { "name": "MongoDB", "category": "Database", "experience": "Advanced" },
-      { "name": "Firebase", "category": "Backend Service", "experience": "Advanced" },
+      {
+        "name": "Firebase",
+        "category": "Backend Service",
+        "experience": "Advanced"
+      },
       { "name": "Prisma", "category": "ORM", "experience": "Advanced" },
-      { "name": "SQL Server", "category": "Database", "experience": "Intermediate" },
-      { "name": "Oracle", "category": "Database", "experience": "Intermediate" },
-      { "name": "RavenDB", "category": "Database", "experience": "Intermediate" }
+      {
+        "name": "SQL Server",
+        "category": "Database",
+        "experience": "Intermediate"
+      },
+      {
+        "name": "Oracle",
+        "category": "Database",
+        "experience": "Intermediate"
+      },
+      {
+        "name": "RavenDB",
+        "category": "Database",
+        "experience": "Intermediate"
+      },
+      {
+        "name": "Python",
+        "category": "Programming Language",
+        "experience": "Advanced"
+      }
     ],
     "devops": [
       { "name": "AWS", "category": "Cloud Platform", "experience": "Advanced" },
