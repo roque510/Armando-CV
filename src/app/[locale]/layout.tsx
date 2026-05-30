@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { SITE_URL, SITE_NAME, buildAlternates, localizedUrl, AUTHOR } from "@/config/seo";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import "../globals.css";
@@ -22,7 +23,8 @@ export async function generateMetadata({
   return {
     title: t("homeTitle"),
     description: t("homeDescription"),
-    metadataBase: new URL("https://armandoroque.dev"),
+    metadataBase: new URL(SITE_URL),
+    alternates: buildAlternates(locale, ""),
     icons: {
       icon: [
         { url: "/favicon.ico", sizes: "any" },
@@ -37,22 +39,28 @@ export async function generateMetadata({
       type: "website",
       title: t("homeTitle"),
       description: t("ogDescription"),
+      url: localizedUrl(locale, ""),
+      siteName: SITE_NAME,
+      locale: locale === "es" ? "es_ES" : "en_US",
     },
-    twitter: { card: "summary_large_image" },
+    twitter: {
+      card: "summary_large_image",
+      title: t("homeTitle"),
+      description: t("ogDescription"),
+    },
   };
 }
 
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Armando Roque",
+  name: AUTHOR.name,
+  url: SITE_URL,
+  image: `${SITE_URL}/apple-touch-icon.png`,
   jobTitle: "Full Stack Engineer & SaaS Founder",
-  email: "mailto:roque09215@gmail.com",
+  email: `mailto:${AUTHOR.email}`,
   address: { "@type": "PostalAddress", addressCountry: "Honduras" },
-  sameAs: [
-    "https://www.linkedin.com/in/armando-roque-547914133/",
-    "https://github.com/roque510",
-  ],
+  sameAs: [AUTHOR.linkedin, AUTHOR.github],
   knowsLanguage: ["en", "es"],
 };
 

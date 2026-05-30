@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { setRequestLocale, getTranslations } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { POSTS, POST_BY_SLUG } from "@/data/posts";
-import ArticleCuttingLlmCosts from "@/components/blog/ArticleCuttingLlmCosts";
+import { getArticleBody } from "@/content";
+import { buildAlternates, localizedUrl, AUTHOR, SITE_NAME } from "@/config/seo";
+import Article from "@/components/blog/Article";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
-    POSTS.filter((p) => p.slug).map((p) => ({ locale, slug: p.slug as string }))
+    POSTS.map((p) => ({ locale, slug: p.slug }))
   );
 }
 
@@ -17,12 +19,29 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  if (!POST_BY_SLUG[slug]) return {};
-  const t = await getTranslations({ locale, namespace: "Article" });
+  const post = POST_BY_SLUG[slug];
+  const body = getArticleBody(slug, locale);
+  if (!post || !body) return {};
+
+  const path = `/blog/${slug}`;
+  const url = localizedUrl(locale, path);
   return {
-    title: `${t("title")} — Armando Roque`,
-    description: t("dek"),
-    openGraph: { type: "article", title: t("title"), description: t("dek") },
+    title: `${body.title} — ${SITE_NAME}`,
+    description: body.dek,
+    alternates: buildAlternates(locale, path),
+    keywords: post.tags,
+    authors: [{ name: AUTHOR.name, url: AUTHOR.github }],
+    openGraph: {
+      type: "article",
+      title: body.title,
+      description: body.dek,
+      url,
+      publishedTime: post.date,
+      authors: [AUTHOR.name],
+      tags: post.tags,
+      siteName: SITE_NAME,
+    },
+    twitter: { card: "summary_large_image", title: body.title, description: body.dek },
   };
 }
 
@@ -35,9 +54,31 @@ export default async function PostPage({
   setRequestLocale(locale);
 
   const post = POST_BY_SLUG[slug];
-  if (!post) notFound();
+  const body = getArticleBody(slug, locale);
+  if (!post || !body) notFound();
 
-  // Only one full article exists in this build.
-  if (slug === "cutting-llm-costs") return <ArticleCuttingLlmCosts />;
-  notFound();
+  const url = localizedUrl(locale, `/blog/${slug}`);
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: body.title,
+    description: body.dek,
+    datePublished: post.date,
+    dateModified: post.date,
+    inLanguage: locale,
+    keywords: post.tags.join(", "),
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    author: { "@type": "Person", name: AUTHOR.name, url: AUTHOR.github },
+    publisher: { "@type": "Person", name: AUTHOR.name },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Article post={post} body={body} locale={locale} />
+    </>
+  );
 }

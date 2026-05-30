@@ -170,6 +170,9 @@
     "title": "Notes from building & shipping",
     "sub": "Solo-founder SaaS lessons, AI & LLM engineering, and full-stack deep dives — the things I wish I'd read sooner.",
     "readArticle": "Read article",
+    "articleBack": "All articles",
+    "articleMore": "More articles",
+    "articleCta": "Building something? Let's talk",
     "minRead": "{n} min read",
     "filters": {
       "all": "All",
@@ -208,38 +211,6 @@
         "excerpt": "How I keep types flowing from the database to the button label — and catch the breakage at compile time, not in support tickets."
       }
     }
-  },
-  "Article": {
-    "backAll": "All articles",
-    "category": "AI & LLM",
-    "title": "Cutting LLM costs 60% without dumbing your product down",
-    "dek": "The model bill is a feature, not a fixed cost. Here's the playbook I use to keep an AI feature cheap once real users show up — caching, routing, and right-sizing — with none of the quality cliff.",
-    "date": "May 14, 2026",
-    "readTime": "9 min read",
-    "p_intro": "The demo was cheap. The launch was not. That's the story of almost every AI feature I've shipped — a slick prototype that costs cents, followed by a production bill that scales linearly with success. The good news: most of that spend is avoidable, and trimming it rarely means a worse product. After doing this across a couple of products, I land in roughly the same place: <strong>about 60% lower cost for output users can't tell apart.</strong>",
-    "p_three_habits": "There's no single trick. It's three habits, stacked.",
-    "h_cache": "1. Cache aggressively — most prompts repeat",
-    "p_cache_1": "The cheapest token is the one you never send. In real usage, a surprising share of requests are near-duplicates: the same FAQ phrased three ways, the same document summarized twice, the same system prompt with a tiny variable swapped. A cache keyed on the normalized prompt collapses all of that into one paid call.",
-    "p_cache_2": "Start with an exact-match cache — it's trivial and it works more than you'd think. Then add a <strong>semantic cache</strong>: embed the incoming prompt, and if it's within a similarity threshold of something you've answered, serve the stored response.",
-    "code_cache_comment": "// Semantic cache: reuse an answer if a close-enough prompt exists.",
-    "code_cache_hit": "// $0 — served from cache",
-    "p_cache_3": "One caution: a semantic cache is a quality knob, not just a cost knob. Set the threshold too loose and you'll serve a stale answer to a subtly different question. I keep it conservative (0.95–0.97 cosine) and exclude anything time-sensitive.",
-    "h_route": "2. Route requests to the smallest model that can do the job",
-    "p_route_1": "Not every request deserves your most expensive model. Classifying intent, extracting a field, formatting JSON, answering a simple lookup — a small or local model nails these for a fraction of the price. Reserve the frontier model for genuinely hard reasoning.",
-    "p_route_2": "The pattern is a cheap <strong>router</strong> in front of your models. A tiny classifier (often a small local model via Ollama) decides the tier, and only the hard tier hits the premium API.",
-    "code_route_local": "// $0, runs on our box",
-    "callout": "<strong>Measure before you route.</strong> Log per-task quality (a thumbs signal or an eval set) <em>before</em> downgrading a model. The win is only real if the cheaper tier holds quality — otherwise you've traded dollars for support tickets.",
-    "h_rightsize": "3. Right-size context — you're paying per token, both ways",
-    "p_rightsize_1": "The third lever is the prompt itself. Teams stuff entire documents into context \"just in case,\" then pay for every token on input <em>and</em> watch latency climb. Retrieval fixes this: pull the few chunks that actually matter and leave the rest on disk.",
-    "li_1": "<strong>Trim the system prompt.</strong> Long instructions get paid for on every single call. Move stable rules into a fine-tune or a terse, well-tested preamble.",
-    "li_2": "<strong>Retrieve, don't dump.</strong> Top-k relevant chunks beat the whole document — cheaper and usually <em>more</em> accurate, because the model isn't distracted.",
-    "li_3": "<strong>Cap output.</strong> Set <code>max_tokens</code> deliberately. \"Be concise\" in the prompt plus a hard ceiling saves more than people expect.",
-    "blockquote": "The model bill is a product decision. Treat tokens like any other resource you'd profile and optimize — because at scale, that's exactly what they are.",
-    "h_together": "Putting it together",
-    "p_together_1": "Stacked, these compound. Caching removes the repeats. Routing makes the survivors cheaper. Right-sizing shrinks what's left. None of them touches the experience for the user — if anything, retrieval and tighter prompts make answers <em>sharper</em>. The 60% isn't a headline number I reverse-engineered; it's roughly where this lands once the three habits are in place and you've stopped paying frontier prices for refund-policy questions.",
-    "p_together_2": "If you're building an AI feature and the bill is starting to sting, start with caching — it's the fastest win — then add the router. You can ship both in an afternoon, and your finance team will notice by the end of the month.",
-    "moreArticles": "More articles",
-    "footCta": "Building something with LLMs? Let's talk"
   },
   "CaseForzive": {
     "metaTitle": "Forzive — Case Study",

@@ -170,6 +170,9 @@
     "title": "Notas de construir y lanzar",
     "sub": "Lecciones de SaaS como fundador en solitario, ingeniería de IA y LLM, y análisis full-stack — las cosas que ojalá hubiera leído antes.",
     "readArticle": "Leer artículo",
+    "articleBack": "Todos los artículos",
+    "articleMore": "Más artículos",
+    "articleCta": "¿Construyendo algo? Hablemos",
     "minRead": "{n} min de lectura",
     "filters": {
       "all": "Todos",
@@ -208,38 +211,6 @@
         "excerpt": "Cómo mantengo los tipos fluyendo desde la base de datos hasta la etiqueta del botón — y atrapo los errores en tiempo de compilación, no en tickets de soporte."
       }
     }
-  },
-  "Article": {
-    "backAll": "Todos los artículos",
-    "category": "IA y LLM",
-    "title": "Reducir costos de LLM un 60% sin empeorar tu producto",
-    "dek": "La factura del modelo es una función, no un costo fijo. Esta es la guía que uso para mantener barata una función de IA cuando llegan usuarios reales — caché, enrutamiento y tamaño justo — sin ninguna caída de calidad.",
-    "date": "14 de mayo de 2026",
-    "readTime": "9 min de lectura",
-    "p_intro": "La demo era barata. El lanzamiento no. Esa es la historia de casi todas las funciones de IA que he lanzado — un prototipo vistoso que cuesta centavos, seguido de una factura de producción que escala linealmente con el éxito. La buena noticia: la mayor parte de ese gasto es evitable, y recortarlo rara vez significa un peor producto. Tras hacer esto en un par de productos, suelo terminar en el mismo lugar: <strong>alrededor de 60% menos de costo para una salida que los usuarios no distinguen.</strong>",
-    "p_three_habits": "No hay un único truco. Son tres hábitos, apilados.",
-    "h_cache": "1. Usa caché con agresividad — la mayoría de los prompts se repiten",
-    "p_cache_1": "El token más barato es el que nunca envías. En el uso real, una porción sorprendente de las solicitudes son casi duplicadas: la misma pregunta frecuente formulada de tres maneras, el mismo documento resumido dos veces, el mismo system prompt con una variable mínima cambiada. Una caché basada en el prompt normalizado colapsa todo eso en una sola llamada pagada.",
-    "p_cache_2": "Empieza con una caché de coincidencia exacta — es trivial y funciona más de lo que crees. Luego añade una <strong>caché semántica</strong>: genera el embedding del prompt entrante y, si está dentro de un umbral de similitud con algo que ya respondiste, sirve la respuesta guardada.",
-    "code_cache_comment": "// Caché semántica: reutiliza una respuesta si existe un prompt suficientemente parecido.",
-    "code_cache_hit": "// $0 — servido desde caché",
-    "p_cache_3": "Una advertencia: una caché semántica es una perilla de calidad, no solo de costo. Si pones el umbral demasiado holgado servirás una respuesta obsoleta a una pregunta sutilmente distinta. Lo mantengo conservador (0,95–0,97 de coseno) y excluyo cualquier cosa sensible al tiempo.",
-    "h_route": "2. Enruta las solicitudes al modelo más pequeño capaz de hacer el trabajo",
-    "p_route_1": "No toda solicitud merece tu modelo más caro. Clasificar intención, extraer un campo, formatear JSON, responder una consulta simple — un modelo pequeño o local resuelve esto por una fracción del precio. Reserva el modelo de frontera para el razonamiento genuinamente difícil.",
-    "p_route_2": "El patrón es un <strong>enrutador</strong> barato frente a tus modelos. Un clasificador diminuto (a menudo un modelo local pequeño vía Ollama) decide el nivel, y solo el nivel difícil llega a la API premium.",
-    "code_route_local": "// $0, corre en nuestra máquina",
-    "callout": "<strong>Mide antes de enrutar.</strong> Registra la calidad por tarea (una señal de pulgar o un set de evaluación) <em>antes</em> de degradar un modelo. La ganancia solo es real si el nivel más barato mantiene la calidad — de lo contrario cambiaste dólares por tickets de soporte.",
-    "h_rightsize": "3. Ajusta el contexto al tamaño justo — pagas por token, en ambos sentidos",
-    "p_rightsize_1": "La tercera palanca es el propio prompt. Los equipos meten documentos enteros en el contexto \"por si acaso\", y luego pagan por cada token de entrada <em>y</em> ven crecer la latencia. La recuperación lo arregla: trae los pocos fragmentos que de verdad importan y deja el resto en disco.",
-    "li_1": "<strong>Recorta el system prompt.</strong> Las instrucciones largas se pagan en cada llamada. Mueve las reglas estables a un fine-tune o a un preámbulo conciso y bien probado.",
-    "li_2": "<strong>Recupera, no vacíes.</strong> Los k fragmentos más relevantes le ganan al documento entero — más barato y normalmente <em>más</em> preciso, porque el modelo no se distrae.",
-    "li_3": "<strong>Limita la salida.</strong> Define <code>max_tokens</code> con intención. \"Sé conciso\" en el prompt más un tope duro ahorra más de lo que la gente espera.",
-    "blockquote": "La factura del modelo es una decisión de producto. Trata los tokens como cualquier otro recurso que perfilarías y optimizarías — porque a escala, es exactamente lo que son.",
-    "h_together": "Juntándolo todo",
-    "p_together_1": "Apilados, se potencian. La caché elimina las repeticiones. El enrutamiento abarata a los sobrevivientes. El tamaño justo encoge lo que queda. Ninguno toca la experiencia del usuario — si acaso, la recuperación y los prompts más ajustados hacen las respuestas <em>más nítidas</em>. El 60% no es un número de titular que ingenié al revés; es más o menos donde aterriza esto una vez que los tres hábitos están en su lugar y dejaste de pagar precios de frontera por preguntas sobre la política de reembolsos.",
-    "p_together_2": "Si estás construyendo una función de IA y la factura empieza a doler, empieza por la caché — es la victoria más rápida — y luego añade el enrutador. Puedes lanzar ambos en una tarde, y tu equipo de finanzas lo notará para fin de mes.",
-    "moreArticles": "Más artículos",
-    "footCta": "¿Construyendo algo con LLMs? Hablemos"
   },
   "CaseForzive": {
     "metaTitle": "Forzive — Caso de estudio",

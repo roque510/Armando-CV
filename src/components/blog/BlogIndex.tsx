@@ -88,7 +88,7 @@ export default function BlogIndex() {
                     <div className="post-meta">
                       <span>{fmt.format(new Date(p.date))}</span>
                       <span className="dot" />
-                      <span>{t("minRead", { n: p.readingKey })}</span>
+                      <span>{t("minRead", { n: p.readingMinutes })}</span>
                     </div>
                     <h3>{t(`posts.${p.id}.title`)}</h3>
                     <p className="excerpt">{t(`posts.${p.id}.excerpt`)}</p>
