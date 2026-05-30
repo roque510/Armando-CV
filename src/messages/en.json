@@ -1,0 +1,342 @@
+{
+  "Meta": {
+    "homeTitle": "Armando Roque — Full Stack Engineer & SaaS Founder",
+    "homeDescription": "Armando Roque — senior full-stack engineer and SaaS founder. 15+ years shipping production software end-to-end. Remote-first from Honduras (UTC-6), bilingual EN/ES. Open to remote roles.",
+    "ogDescription": "I build and ship products end-to-end. Senior full-stack engineer & SaaS founder, remote-first, bilingual. Open to remote roles."
+  },
+  "Nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "work": "Work",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "Header": {
+    "brandRole": "Engineer · Founder",
+    "resume": "Resume",
+    "letsTalk": "Let's talk",
+    "menu": "Menu",
+    "downloadResume": "Download Resume (PDF)"
+  },
+  "Hero": {
+    "available": "Open to remote roles",
+    "roles": ["Full Stack Engineer", "SaaS Founder", "Founding Engineer"],
+    "headlineLead": "I build and ship",
+    "headlineInk": "products end‑to‑end.",
+    "sub": "Senior full-stack engineer and SaaS co-founder with <strong>15+ years</strong> taking software from first commit to paying customers. Remote-first from Honduras <strong>(UTC‑6)</strong>, fully bilingual EN/ES.",
+    "lookingTag": "Looking for",
+    "lookingText": "<b>Remote senior / founding-engineer roles.</b> Core stack: Next.js · TypeScript · Node · PostgreSQL · AWS.",
+    "letsTalk": "Let's talk",
+    "readBlog": "Read the blog",
+    "downloadResume": "Download Resume (PDF)",
+    "dossierAvailable": "Available",
+    "d_role_k": "Role",
+    "d_role_v": "<b>Full Stack Engineer</b> & SaaS Founder",
+    "d_seniority_k": "Seniority",
+    "d_seniority_v": "<b>Senior</b> · 15+ yrs · end-to-end ownership",
+    "d_avail_k": "Availability",
+    "d_avail_v": "Open · Remote",
+    "d_tz_k": "Timezone",
+    "d_tz_v": "<b>UTC‑6</b> (Central) · overlaps US + LATAM",
+    "d_loc_k": "Location",
+    "d_loc_v": "Honduras · remote-first",
+    "d_lang_k": "Languages",
+    "d_lang_v": "English · Español <subtle>(native)</subtle>",
+    "d_stack_k": "Core stack",
+    "stats": [
+      { "pre": "15", "unit": "+", "post": "", "lab": "Years building full-stack", "sub": "Senior · end-to-end ownership" },
+      { "pre": "2", "unit": "", "post": "", "lab": "SaaS products shipped", "sub": "As founder — built & owned" },
+      { "pre": "UTC", "unit": "-6", "post": "", "lab": "Overlaps US & LATAM hours", "sub": "Real-time remote collaboration" },
+      { "pre": "EN", "unit": "/", "post": "ES", "lab": "Fully bilingual", "sub": "Engineer in two languages" }
+    ]
+  },
+  "About": {
+    "eyebrow": "About",
+    "titleLine1": "Engineer who ships.",
+    "titleLine2": "Founder who builds.",
+    "p1": "I'm a senior full-stack engineer who got tired of handing finished code over a wall — so I started <strong>building and shipping my own products</strong>. Today I do both, and both make each other sharper.",
+    "p2": "As an <strong>engineer</strong>, I own the entire path: data model, API, frontend, infrastructure, deploy. I've spent 15+ years across startups and product teams writing TypeScript and Python that holds up in production — and I care about the boring parts that keep it fast and reliable.",
+    "p3": "As a <strong>founder</strong>, I've taken two SaaS products from a blank repository to paying customers — making the architecture, pricing, and UX calls myself. That means I think about the business behind the ticket, not just the ticket.",
+    "p4": "I work <strong>remote-first from Honduras on Central Time (UTC‑6)</strong> — strong daytime overlap with US and LATAM teams — and I'm fully bilingual in English and Spanish.",
+    "facts": [
+      { "title": "15+ years shipping", "sub": "Production full-stack software" },
+      { "title": "2 SaaS products", "sub": "Co-founder — built & operated" },
+      { "title": "UTC‑6 · Central", "sub": "Overlaps US + LATAM business hours" },
+      { "title": "Bilingual EN / ES", "sub": "Native-level in both" }
+    ]
+  },
+  "Skills": {
+    "eyebrow": "Skills",
+    "title": "The full stack, end to end",
+    "sub": "Keyword-scannable on purpose — the exact tools I reach for, grouped by layer.",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "ai": "AI / ML",
+      "infra": "Infra / DevOps"
+    }
+  },
+  "Experience": {
+    "eyebrow": "Experience",
+    "title": "A decade and a half of shipping",
+    "sub": "Founder work first — then the senior engineering roles that built the foundation.",
+    "founderBadge": "Founder",
+    "items": [
+      {
+        "role": "Co-Founder & Full Stack Engineer",
+        "company": "Forzive",
+        "companyDesc": "multi-tenant gym & studio management SaaS",
+        "desc": "Designed and shipped the entire platform: multi-tenant architecture with a subdomain per gym, QR check-in, scheduling, Stripe payments & invoicing, and biometric door access via ZKTeco hardware. Owned product, architecture, and infra."
+      },
+      {
+        "role": "Founder & Engineer",
+        "company": "Playflow",
+        "companyDesc": "tournament management platform",
+        "desc": "Built a platform for organizing competitive tournaments end-to-end: registration, bracket generation, live scoring, and player-facing schedules. Landing at playflow-games.com, live app at playflow.games."
+      },
+      {
+        "role": "Senior Full Stack Engineer",
+        "company": "Qualpay",
+        "companyDesc": "payments infrastructure",
+        "desc": "Built and maintained payment-processing features and merchant-facing dashboards on a high-throughput platform, with a focus on reliability and PCI-aware data handling."
+      },
+      {
+        "role": "Full Stack Engineer",
+        "company": "Condoit",
+        "companyDesc": "field-data SaaS for electrical pros",
+        "desc": "Shipped features across web and mobile that turned on-site electrical surveys into structured, shareable data. Worked close to customers to translate field workflows into product."
+      },
+      {
+        "role": "Software Engineer",
+        "company": "AnswersNow",
+        "companyDesc": "telehealth platform",
+        "desc": "Developed core product features for a care-delivery platform, integrating real-time communication and scheduling."
+      },
+      {
+        "role": "Software Engineer → Web Developer",
+        "company": "InnovateTech",
+        "companyDesc": "and earlier roles",
+        "desc": "Where it started: a decade of client and product work across the stack — the foundation for everything since. Full history in the resume."
+      }
+    ]
+  },
+  "Work": {
+    "eyebrow": "Featured Work",
+    "title": "Products I built and shipped",
+    "sub": "Case studies lead with outcomes. Dig into the architecture and decisions behind each.",
+    "readCase": "Read the case study",
+    "forzive": {
+      "kick": "Case Study · Co-Founder",
+      "desc": "A multi-tenant SaaS that replaces the spreadsheets, billing tools, and whiteboards a gym runs on — one app for scheduling, check-in, payments, and access control.",
+      "outcomes": [
+        { "big": "Multi‑tenant", "sub": "subdomain per gym" },
+        { "big": "QR + biometric", "sub": "check-in & door access" },
+        { "big": "Stripe", "sub": "payments & invoicing" }
+      ]
+    },
+    "playflow": {
+      "kick": "Case Study · Founder",
+      "mediaLabel": "Tournament Platform",
+      "desc": "A tournament management platform that runs competitive events end-to-end — registration, bracket generation, live scoring, and player schedules.",
+      "outcomes": [
+        { "big": "Brackets", "sub": "auto-generated" },
+        { "big": "Live scoring", "sub": "real-time updates" },
+        { "big": "2 surfaces", "sub": "landing + live app" }
+      ]
+    },
+    "mini": [
+      { "title": "AI PDF Analyzer", "desc": "Chat with your documents — a RAG pipeline that ingests PDFs and answers questions locally or via the cloud." },
+      { "title": "Dev tooling & CLIs", "desc": "Small open-source utilities that smooth out my own workflow — codegen, project scaffolds, and automation." },
+      { "title": "More on GitHub", "desc": "Experiments, starters, and side projects — the rest of what I tinker with lives on my profile." }
+    ]
+  },
+  "Contact": {
+    "eyebrow": "Contact",
+    "title": "Let's build something that ships.",
+    "sub": "I'm open to remote senior and founding-engineer roles. Email is the fastest way to reach me — I read every one.",
+    "footnote": "Based in Honduras · UTC‑6 · replies within a day"
+  },
+  "Footer": {
+    "role": "Full Stack Engineer · SaaS Founder",
+    "builtWith": "Built with Next.js, TypeScript & next-intl.",
+    "openLine": "Open to remote roles · roque09215@gmail.com"
+  },
+  "Blog": {
+    "metaTitle": "Blog — Armando Roque",
+    "metaDescription": "Writing on solo-founder SaaS lessons, AI & LLM engineering, and full-stack deep dives — by Armando Roque, full-stack engineer & SaaS founder.",
+    "backHome": "Back to home",
+    "eyebrow": "Writing",
+    "title": "Notes from building & shipping",
+    "sub": "Solo-founder SaaS lessons, AI & LLM engineering, and full-stack deep dives — the things I wish I'd read sooner.",
+    "readArticle": "Read article",
+    "minRead": "{n} min read",
+    "filters": {
+      "all": "All",
+      "founder": "Founder & SaaS",
+      "ai": "AI & LLM",
+      "fullstack": "Full-Stack"
+    },
+    "cat": {
+      "founder": "Founder",
+      "ai": "AI & LLM",
+      "fullstack": "Full-Stack"
+    },
+    "posts": {
+      "cutting-llm-costs": {
+        "title": "Cutting LLM costs 60% without dumbing your product down",
+        "excerpt": "Caching, routing, and right-sizing models. A practical playbook for keeping an AI feature cheap once real users show up."
+      },
+      "multi-tenant-saas-solo": {
+        "title": "What I learned shipping a multi-tenant SaaS mostly solo",
+        "excerpt": "The architecture calls I'd make again, the ones I'd undo, and why \"boring\" infrastructure was the best decision I made."
+      },
+      "subdomains-nextjs": {
+        "title": "Multi-tenant subdomains in Next.js 14 without losing your mind",
+        "excerpt": "Middleware, wildcard DNS, and the data model that keeps tenant isolation honest. A field guide from production."
+      },
+      "private-rag-ollama": {
+        "title": "Private RAG on your own hardware with Ollama & LLaMA 3",
+        "excerpt": "When data can't leave the building: a local retrieval pipeline that's good enough to ship, and where the cloud still wins."
+      },
+      "stripe-billing-saas": {
+        "title": "Stripe billing for SaaS: the parts the docs quietly skip",
+        "excerpt": "Proration, failed payments, plan migrations, and webhooks you actually need. The billing edge cases that bite in month three."
+      },
+      "type-safe-end-to-end": {
+        "title": "Type-safe end to end: the Prisma + TypeScript patterns I trust",
+        "excerpt": "How I keep types flowing from the database to the button label — and catch the breakage at compile time, not in support tickets."
+      }
+    }
+  },
+  "Article": {
+    "backAll": "All articles",
+    "category": "AI & LLM",
+    "title": "Cutting LLM costs 60% without dumbing your product down",
+    "dek": "The model bill is a feature, not a fixed cost. Here's the playbook I use to keep an AI feature cheap once real users show up — caching, routing, and right-sizing — with none of the quality cliff.",
+    "date": "May 14, 2026",
+    "readTime": "9 min read",
+    "p_intro": "The demo was cheap. The launch was not. That's the story of almost every AI feature I've shipped — a slick prototype that costs cents, followed by a production bill that scales linearly with success. The good news: most of that spend is avoidable, and trimming it rarely means a worse product. After doing this across a couple of products, I land in roughly the same place: <strong>about 60% lower cost for output users can't tell apart.</strong>",
+    "p_three_habits": "There's no single trick. It's three habits, stacked.",
+    "h_cache": "1. Cache aggressively — most prompts repeat",
+    "p_cache_1": "The cheapest token is the one you never send. In real usage, a surprising share of requests are near-duplicates: the same FAQ phrased three ways, the same document summarized twice, the same system prompt with a tiny variable swapped. A cache keyed on the normalized prompt collapses all of that into one paid call.",
+    "p_cache_2": "Start with an exact-match cache — it's trivial and it works more than you'd think. Then add a <strong>semantic cache</strong>: embed the incoming prompt, and if it's within a similarity threshold of something you've answered, serve the stored response.",
+    "code_cache_comment": "// Semantic cache: reuse an answer if a close-enough prompt exists.",
+    "code_cache_hit": "// $0 — served from cache",
+    "p_cache_3": "One caution: a semantic cache is a quality knob, not just a cost knob. Set the threshold too loose and you'll serve a stale answer to a subtly different question. I keep it conservative (0.95–0.97 cosine) and exclude anything time-sensitive.",
+    "h_route": "2. Route requests to the smallest model that can do the job",
+    "p_route_1": "Not every request deserves your most expensive model. Classifying intent, extracting a field, formatting JSON, answering a simple lookup — a small or local model nails these for a fraction of the price. Reserve the frontier model for genuinely hard reasoning.",
+    "p_route_2": "The pattern is a cheap <strong>router</strong> in front of your models. A tiny classifier (often a small local model via Ollama) decides the tier, and only the hard tier hits the premium API.",
+    "code_route_local": "// $0, runs on our box",
+    "callout": "<strong>Measure before you route.</strong> Log per-task quality (a thumbs signal or an eval set) <em>before</em> downgrading a model. The win is only real if the cheaper tier holds quality — otherwise you've traded dollars for support tickets.",
+    "h_rightsize": "3. Right-size context — you're paying per token, both ways",
+    "p_rightsize_1": "The third lever is the prompt itself. Teams stuff entire documents into context \"just in case,\" then pay for every token on input <em>and</em> watch latency climb. Retrieval fixes this: pull the few chunks that actually matter and leave the rest on disk.",
+    "li_1": "<strong>Trim the system prompt.</strong> Long instructions get paid for on every single call. Move stable rules into a fine-tune or a terse, well-tested preamble.",
+    "li_2": "<strong>Retrieve, don't dump.</strong> Top-k relevant chunks beat the whole document — cheaper and usually <em>more</em> accurate, because the model isn't distracted.",
+    "li_3": "<strong>Cap output.</strong> Set <code>max_tokens</code> deliberately. \"Be concise\" in the prompt plus a hard ceiling saves more than people expect.",
+    "blockquote": "The model bill is a product decision. Treat tokens like any other resource you'd profile and optimize — because at scale, that's exactly what they are.",
+    "h_together": "Putting it together",
+    "p_together_1": "Stacked, these compound. Caching removes the repeats. Routing makes the survivors cheaper. Right-sizing shrinks what's left. None of them touches the experience for the user — if anything, retrieval and tighter prompts make answers <em>sharper</em>. The 60% isn't a headline number I reverse-engineered; it's roughly where this lands once the three habits are in place and you've stopped paying frontier prices for refund-policy questions.",
+    "p_together_2": "If you're building an AI feature and the bill is starting to sting, start with caching — it's the fastest win — then add the router. You can ship both in an afternoon, and your finance team will notice by the end of the month.",
+    "moreArticles": "More articles",
+    "footCta": "Building something with LLMs? Let's talk"
+  },
+  "CaseForzive": {
+    "metaTitle": "Forzive — Case Study",
+    "back": "Back to work",
+    "tag": "Case Study · Co-Founder & Engineer",
+    "title": "Run a gym without spreadsheets",
+    "dek": "Forzive is a multi-tenant SaaS that replaces the patchwork of billing tools, spreadsheets, and whiteboards a gym runs on — one app for scheduling, check-in, payments, and physical access.",
+    "visit": "Visit forzive.com",
+    "ask": "Ask me about it",
+    "meta": [
+      { "k": "Role", "v": "Co-Founder · Full-stack" },
+      { "k": "Timeline", "v": "2022 — Present" },
+      { "k": "Type", "v": "Multi-tenant SaaS" },
+      { "k": "Status", "v": "Live in production" }
+    ],
+    "outcomesEyebrow": "Outcomes",
+    "outcomesTitle": "What it delivers",
+    "outcomes": [
+      { "big": "5 → 1", "lab": "Tools consolidated", "sub": "Billing, scheduling, access control, messaging, and the whiteboard — one app instead of five." },
+      { "big": "Self‑serve", "lab": "Onboarding per gym", "sub": "A new gym spins up on its own subdomain — no manual provisioning from us." },
+      { "big": "Door → app", "lab": "Physical + digital", "sub": "Biometric door access tied to membership status, so an expired plan can't badge in." }
+    ],
+    "problemEyebrow": "The problem",
+    "problemTitle": "Gyms run on duct tape",
+    "problemP1": "Most boxes and studios stitch together a payment processor, a spreadsheet for members, a separate scheduling tool, a messaging app, and a literal whiteboard for the workout. Nothing talks to anything. An expired membership still books a class; a check-in never reaches billing; the owner reconciles it all by hand on Sunday night.",
+    "problemP2": "We built Forzive around the <strong>coach's workflow, not the billing system</strong> — flat monthly pricing, unlimited members, and one source of truth from the front door to the invoice.",
+    "figCaptions": {
+      "dashboard": "The admin dashboard — what's running now, what's next, and member activity at a glance.",
+      "schedule": "Class management — recurring slots, capacity, and coaches.",
+      "plans": "Membership plans — pricing, billing intervals, and active members.",
+      "progress": "Reports & analytics — members, revenue, and activity at a glance."
+    },
+    "archEyebrow": "Architecture",
+    "archTitle": "Multi-tenant from day one",
+    "archIntro": "Every gym is a tenant with its own subdomain, isolated data, and branding — but it all runs on one codebase and one deploy. The interesting decisions were about isolation and keeping the boring parts boring.",
+    "arch": [
+      { "k": "Framework", "bold": "Next.js 14 (App Router)", "rest": "server components for the data-heavy admin surfaces, with a thin client layer for live interactions." },
+      { "k": "Data", "bold": "PostgreSQL + Prisma", "rest": "tenant-scoped queries enforced at the data layer so isolation isn't left to discipline." },
+      { "k": "Tenancy", "bold": "Subdomain per gym", "rest": "middleware resolves the tenant from the host, with wildcard DNS so new gyms need zero manual setup." },
+      { "k": "Hosting", "bold": "Vultr + Cloudflare", "rest": "predictable cost, wildcard TLS, and an edge cache in front of the static surfaces." },
+      { "k": "Payments", "bold": "Stripe", "rest": "subscriptions, invoicing, and webhooks reconciled back to membership status." },
+      { "k": "Hardware", "bold": "ZKTeco biometric readers", "rest": "door access bridged to the app so entry follows the membership, not a keycard." }
+    ],
+    "featuresEyebrow": "Features",
+    "featuresTitle": "From the front door to the invoice",
+    "features": [
+      { "title": "QR check-in", "desc": "Members scan in; attendance flows straight to the coach feed and the records." },
+      { "title": "Scheduling & auto-booking", "desc": "Class capacity, waitlists, and recurring bookings without the back-and-forth." },
+      { "title": "Payments & invoicing", "desc": "Stripe-backed subscriptions with invoices that match what actually happened." },
+      { "title": "Biometric door access", "desc": "ZKTeco readers gate entry on live membership status — no plan, no door." }
+    ],
+    "stackEyebrow": "Stack",
+    "stackTitle": "Built with",
+    "nextLbl": "Next case study",
+    "nextTitle": "Playflow — tournament management",
+    "nextCta": "View Playflow"
+  },
+  "CasePlayflow": {
+    "metaTitle": "Playflow — Case Study",
+    "back": "Back to work",
+    "tag": "Case Study · Founder & Engineer",
+    "dek": "A tournament management platform that runs competitive events end-to-end — registration, bracket generation, live scoring, and player-facing schedules — across a marketing site and a live app.",
+    "openApp": "Open the app",
+    "meta": [
+      { "k": "Role", "v": "Founder · Full-stack" },
+      { "k": "Timeline", "v": "2021 — Present" },
+      { "k": "Type", "v": "Tournament SaaS" },
+      { "k": "Surfaces", "v": "Landing + live app" }
+    ],
+    "bannerNote": "App screenshot · 1920 × 960",
+    "outcomesEyebrow": "Outcomes",
+    "outcomesTitle": "What it delivers",
+    "outcomes": [
+      { "big": "Zero‑admin", "lab": "Bracket generation", "sub": "Organizers stop drawing brackets by hand — seeding and pairings are generated and updated automatically." },
+      { "big": "Real‑time", "lab": "Live scoring", "sub": "Scores update as matches finish; players and spectators follow along without a refresh." },
+      { "big": "One link", "lab": "Player schedules", "sub": "Every competitor gets a personal schedule — who, when, and which court — no group-chat chaos." }
+    ],
+    "problemEyebrow": "The problem",
+    "problemTitle": "Tournaments run on chaos",
+    "problemP1": "Organizing a competitive event usually means a spreadsheet for sign-ups, a hand-drawn bracket taped to a wall, and a frantic group chat for scores and schedule changes. It doesn't scale past a few dozen players, and the organizer spends the whole day as a human update-feed.",
+    "problemP2": "Playflow turns that into software: <strong>register, seed, generate, score, and broadcast</strong> — with the bracket as a living document everyone can watch.",
+    "bracketEyebrow": "The bracket",
+    "bracketTitle": "A living bracket, updating live",
+    "bracketFinal": "Final",
+    "bracketCaption": "Single-elimination bracket — live scores propagate up the tree as matches finish.",
+    "featuresEyebrow": "Features",
+    "featuresTitle": "Everything an organizer needs",
+    "features": [
+      { "title": "Registration", "desc": "Open sign-ups with seeding and player profiles — no spreadsheet." },
+      { "title": "Bracket generation", "desc": "Single/double elimination and group stages, generated and re-seeded automatically." },
+      { "title": "Live scoring", "desc": "Results pushed in real time and propagated up the bracket instantly." },
+      { "title": "Player schedules", "desc": "Personal schedules with court and time, shareable as a single link." }
+    ],
+    "stackEyebrow": "Stack",
+    "stackTitle": "Built with",
+    "nextLbl": "Next case study",
+    "nextTitle": "Forzive — gym management SaaS",
+    "nextCta": "View Forzive"
+  }
+}
