@@ -6,6 +6,7 @@ import { POSTS, POST_BY_SLUG } from "@/data/posts";
 import { getArticleBody } from "@/content";
 import { buildAlternates, localizedUrl, AUTHOR, SITE_NAME } from "@/config/seo";
 import Article from "@/components/blog/Article";
+import ClarityPage from "@/components/analytics/ClarityPage";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -77,6 +78,10 @@ export default async function PostPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ClarityPage
+        tags={{ page_type: "post", post: slug, category: post.category }}
+        event="blog_post_view"
       />
       <Article post={post} body={body} locale={locale} />
     </>

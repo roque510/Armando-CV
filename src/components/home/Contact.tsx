@@ -23,7 +23,11 @@ export default function Contact() {
             <h2 style={{ marginTop: 16 }}>{t("title")}</h2>
             <p>{t("sub")}</p>
             <div className="contact-actions">
-              <a className="btn btn-primary btn-lg" href={`mailto:${EMAIL}`}>
+              <a
+                className="btn btn-primary btn-lg"
+                href={`mailto:${EMAIL}`}
+                data-evt="contact_email"
+              >
                 <MailIcon />
                 {EMAIL}
               </a>
@@ -32,6 +36,7 @@ export default function Contact() {
                 href={LINKEDIN}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-evt="contact_linkedin"
               >
                 LinkedIn
               </a>
@@ -40,6 +45,7 @@ export default function Contact() {
                 href={GITHUB}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-evt="contact_github"
               >
                 GitHub
               </a>

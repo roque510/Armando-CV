@@ -127,6 +127,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
+              data-evt="contact_github"
             >
               <GitHubIcon />
             </a>
@@ -136,17 +137,32 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
+              data-evt="contact_linkedin"
             >
               <LinkedInIcon />
             </a>
-            <a className="icon-btn" href={`mailto:${EMAIL}`} aria-label="Email">
+            <a
+              className="icon-btn"
+              href={`mailto:${EMAIL}`}
+              aria-label="Email"
+              data-evt="contact_email"
+            >
               <MailIcon />
             </a>
-            <a className="btn btn-ghost btn-sm hide-sm" href={RESUME} download={RESUME_NAME}>
+            <a
+              className="btn btn-ghost btn-sm hide-sm"
+              href={RESUME}
+              download={RESUME_NAME}
+              data-evt="resume_download"
+            >
               <DownloadIcon />
               {tH("resume")}
             </a>
-            <a className="btn btn-primary btn-sm" href={`mailto:${EMAIL}`}>
+            <a
+              className="btn btn-primary btn-sm"
+              href={`mailto:${EMAIL}`}
+              data-evt="contact_email"
+            >
               {tH("letsTalk")}
             </a>
             <button
@@ -185,7 +201,12 @@ export default function Header() {
             {t(item.key)}
           </Link>
         ))}
-        <a href={RESUME} download={RESUME_NAME} onClick={() => setDrawerOpen(false)}>
+        <a
+          href={RESUME}
+          download={RESUME_NAME}
+          data-evt="resume_download"
+          onClick={() => setDrawerOpen(false)}
+        >
           {tH("downloadResume")}
         </a>
         <div style={{ display: "flex", gap: 10, marginTop: 14 }}>
@@ -193,6 +214,7 @@ export default function Header() {
             className="btn btn-primary btn-block"
             href={`mailto:${EMAIL}`}
             style={{ flex: 1 }}
+            data-evt="contact_email"
           >
             {tH("letsTalk")}
           </a>

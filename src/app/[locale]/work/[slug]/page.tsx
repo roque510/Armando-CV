@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { buildAlternates, localizedUrl, SITE_NAME, AUTHOR } from "@/config/seo";
 import CaseForzive from "@/components/work/CaseForzive";
 import CasePlayflow from "@/components/work/CasePlayflow";
+import ClarityPage from "@/components/analytics/ClarityPage";
 
 const CASES = ["forzive", "playflow"] as const;
 type CaseSlug = (typeof CASES)[number];
@@ -79,6 +80,7 @@ export default async function CasePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <ClarityPage tags={{ page_type: "case", case: slug }} event="case_view" />
       {slug === "forzive" ? <CaseForzive /> : <CasePlayflow />}
     </>
   );

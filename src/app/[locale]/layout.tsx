@@ -7,6 +7,8 @@ import { routing } from "@/i18n/routing";
 import { SITE_URL, SITE_NAME, buildAlternates, localizedUrl, AUTHOR } from "@/config/seo";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ClarityAnalytics from "@/components/analytics/ClarityAnalytics";
+import ClarityInit from "@/components/analytics/ClarityInit";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -82,7 +84,9 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
+        <ClarityAnalytics />
         <NextIntlClientProvider>
+          <ClarityInit locale={locale} />
           <Header />
           <main>{children}</main>
           <Footer />

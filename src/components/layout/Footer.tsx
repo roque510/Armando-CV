@@ -29,7 +29,12 @@ export default function Footer() {
             </span>
           </Link>
           <div className="footer-socials">
-            <a className="icon-btn" href={`mailto:${EMAIL}`} aria-label="Email">
+            <a
+              className="icon-btn"
+              href={`mailto:${EMAIL}`}
+              aria-label="Email"
+              data-evt="contact_email"
+            >
               <MailIcon />
             </a>
             <a
@@ -38,6 +43,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
+              data-evt="contact_github"
             >
               <GitHubIcon />
             </a>
@@ -47,6 +53,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
+              data-evt="contact_linkedin"
             >
               <LinkedInIcon />
             </a>

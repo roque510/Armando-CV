@@ -5,6 +5,7 @@ import Skills from "@/components/home/Skills";
 import Experience from "@/components/home/Experience";
 import Work from "@/components/home/Work";
 import Contact from "@/components/home/Contact";
+import ClarityPage from "@/components/analytics/ClarityPage";
 
 export default async function Home({
   params,
@@ -16,6 +17,7 @@ export default async function Home({
 
   return (
     <>
+      <ClarityPage tags={{ page_type: "home" }} />
       <Hero />
       <About />
       <Skills />

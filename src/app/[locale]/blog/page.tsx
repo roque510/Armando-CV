@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { buildAlternates, localizedUrl, SITE_NAME } from "@/config/seo";
 import BlogIndex from "@/components/blog/BlogIndex";
+import ClarityPage from "@/components/analytics/ClarityPage";
 
 export async function generateMetadata({
   params,
@@ -37,5 +38,10 @@ export default async function BlogPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <BlogIndex />;
+  return (
+    <>
+      <ClarityPage tags={{ page_type: "blog" }} />
+      <BlogIndex />
+    </>
+  );
 }

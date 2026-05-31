@@ -108,14 +108,23 @@ export default function Hero() {
             </div>
 
             <div className="hero-ctas">
-              <a className="btn btn-primary btn-lg" href={`mailto:${EMAIL}`}>
+              <a
+                className="btn btn-primary btn-lg"
+                href={`mailto:${EMAIL}`}
+                data-evt="contact_email"
+              >
                 {t("letsTalk")}
                 <ArrowRightIcon />
               </a>
               <Link className="btn btn-ghost btn-lg" href="/blog">
                 {t("readBlog")}
               </Link>
-              <a className="btn btn-outline btn-lg" href={RESUME} download={RESUME_NAME}>
+              <a
+                className="btn btn-outline btn-lg"
+                href={RESUME}
+                download={RESUME_NAME}
+                data-evt="resume_download"
+              >
                 <DownloadIcon />
                 {t("downloadResume")}
               </a>
