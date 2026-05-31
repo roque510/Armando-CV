@@ -122,7 +122,7 @@ export default function Header() {
             </div>
 
             <a
-              className="icon-btn hide-sm"
+              className="icon-btn hide-md"
               href={GITHUB}
               target="_blank"
               rel="noopener noreferrer"
@@ -132,7 +132,7 @@ export default function Header() {
               <GitHubIcon />
             </a>
             <a
-              className="icon-btn hide-sm"
+              className="icon-btn hide-md"
               href={LINKEDIN}
               target="_blank"
               rel="noopener noreferrer"
@@ -150,7 +150,7 @@ export default function Header() {
               <MailIcon />
             </a>
             <a
-              className="btn btn-ghost btn-sm hide-sm"
+              className="btn btn-ghost btn-sm hide-md"
               href={RESUME}
               download={RESUME_NAME}
               data-evt="resume_download"
@@ -209,12 +209,69 @@ export default function Header() {
         >
           {tH("downloadResume")}
         </a>
-        <div style={{ display: "flex", gap: 10, marginTop: 14 }}>
+
+        <div className="drawer-divider" />
+
+        <div className="lang-toggle drawer-lang" role="group" aria-label="Language">
+          <button
+            type="button"
+            className={locale === "en" ? "on" : undefined}
+            onClick={() => {
+              switchLocale("en");
+              setDrawerOpen(false);
+            }}
+          >
+            EN
+          </button>
+          <button
+            type="button"
+            className={locale === "es" ? "on" : undefined}
+            onClick={() => {
+              switchLocale("es");
+              setDrawerOpen(false);
+            }}
+          >
+            ES
+          </button>
+        </div>
+
+        <div className="drawer-socials">
+          <a
+            className="icon-btn"
+            href={GITHUB}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            data-evt="contact_github"
+          >
+            <GitHubIcon />
+          </a>
+          <a
+            className="icon-btn"
+            href={LINKEDIN}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            data-evt="contact_linkedin"
+          >
+            <LinkedInIcon />
+          </a>
+          <a
+            className="icon-btn"
+            href={`mailto:${EMAIL}`}
+            aria-label="Email"
+            data-evt="contact_email"
+          >
+            <MailIcon />
+          </a>
+        </div>
+
+        <div className="drawer-actions">
           <a
             className="btn btn-primary btn-block"
             href={`mailto:${EMAIL}`}
-            style={{ flex: 1 }}
             data-evt="contact_email"
+            onClick={() => setDrawerOpen(false)}
           >
             {tH("letsTalk")}
           </a>
